@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 408100be4a2ca49409a06ed8b7694cd9, type: 3}
+  m_Name: Thoth
+  m_EditorClassIdentifier: 
+  godDescription: God of writing
+  godImage: {fileID: 21300000, guid: 05a3d1452a5224f409e7befcdee61545, type: 3}
+  godShrine: {fileID: 21300000, guid: 05a3d1452a5224f409e7befcdee61545, type: 3}
+  shrineConversation: {fileID: 11400000, guid: a99089dfacc246d428c4b84d0206200f, type: 2}
+  godConversation: {fileID: 11400000, guid: dbcab237d0f124b44bdbc46e36be94d2, type: 2}
