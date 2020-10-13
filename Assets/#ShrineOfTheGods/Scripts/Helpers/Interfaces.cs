@@ -10,7 +10,3 @@ public interface IInteractable
     void Interact();
 }
 
-public interface IUsable
-{
-    void Use(PlayerControl player);
-}

@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bf77c9dc1daad346b47d6a72a14148f, type: 3}
+  m_Name: VegetationLand
+  m_EditorClassIdentifier: 
+  rarity: 3
+  landColor: {r: 0.21176472, g: 0.7490196, b: 0.3529412, a: 1}
+  spawningTemplates:
+  - {fileID: 11400000, guid: 70df22be05a120e469e79ad14a6a97e8, type: 2}
+  - {fileID: 11400000, guid: 0e683a57769665e4484e5a1445592ce7, type: 2}
+  - {fileID: 11400000, guid: ce5db2d6bb27a25489fe01e5a954a498, type: 2}
+  - {fileID: 11400000, guid: 1fbd8b46cd6ef0f4bb8f60475cf5bfa5, type: 2}
