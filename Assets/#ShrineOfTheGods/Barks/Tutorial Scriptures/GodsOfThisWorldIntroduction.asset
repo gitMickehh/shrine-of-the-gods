@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 107c97d0bb7d61640a26f2b47be744f8, type: 3}
+  m_Name: GodsOfThisWorldIntroduction
+  m_EditorClassIdentifier: 
+  currentConversation: 0
+  loopConverastion: 1
+  inOrder: 1
+  CharacterName: Scripture 2
+  conversations:
+  - name: Gods are what keep this world running
+    sentences:
+    - This world is only alive because the gods are.
+    - The key lies in perfect balance.
+    - If one of them gets too strong.. we all die.
+    - Seize the day and make sure there is balance.

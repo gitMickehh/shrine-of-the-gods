@@ -9,6 +9,7 @@ public class S_Conversation : ScriptableObject
 
     public int currentConversation = 0;
     public bool loopConverastion = true;
+    public bool inOrder = false;
     
     [System.Serializable]public struct Conversation
     {

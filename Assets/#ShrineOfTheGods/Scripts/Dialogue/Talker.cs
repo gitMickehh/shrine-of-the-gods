@@ -52,7 +52,6 @@ public class Talker : MonoBehaviour, IInteractable
     public void Interact()
     {
         CheckConversationChanged();
-        //Talk here!
         Talk();
         OnInteraction.Invoke();
     }
@@ -68,7 +67,6 @@ public class Talker : MonoBehaviour, IInteractable
 
     private void Talk()
     {
-        // textBubble.Value.Type(transform.position, "Hi! I am " + transform.name);
         if (currentConversationNumber == conversationPiece.currentConversation)
         {
             //nothing has changed
@@ -85,8 +83,13 @@ public class Talker : MonoBehaviour, IInteractable
 
         if (sentenceFinished)
         {
-            currentSentence = PopRandomSentence(currentSentences);
-            textBubble.Value.Type(transform.position, currentSentence, SentenceFinished);
+            if(conversationPiece.inOrder)
+                currentSentence = PopNextSentence(currentSentences);
+            else
+                currentSentence = PopRandomSentence(currentSentences);
+            
+            textBubble.Value.Type(conversationIcon.transform.position, currentSentence, SentenceFinished);
+            sentenceFinished = false;
         }
         else
         {
@@ -99,6 +102,21 @@ public class Talker : MonoBehaviour, IInteractable
     {
         sentenceFinished = true;
         OnEndSentence.Invoke();
+    }
+
+    private string PopNextSentence(List<string> sentences)
+    {
+        if (sentences.Count == 1)
+        {
+            string lastSentence = sentences[0];
+            currentSentences = conversationPiece.GetConversation(currentConversationNumber).ToList<string>();
+
+            return lastSentence;
+        }
+
+        string sentence = sentences[0];
+        sentences.Remove(sentence);
+        return sentence;
     }
 
     private string PopRandomSentence(List<string> sentences)
