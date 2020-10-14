@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   godDescription: God of writing
   godImage: {fileID: 21300000, guid: 05a3d1452a5224f409e7befcdee61545, type: 3}
-  godShrine: {fileID: 21300000, guid: c350dfd7a4b763b419aa89f22b29ac88, type: 3}
+  godShrine: {fileID: 5335999299230153148, guid: 975cea8f181be04449b6f81312f65d72,
+    type: 3}
   shrineConversation: {fileID: 11400000, guid: a99089dfacc246d428c4b84d0206200f, type: 2}
   godConversation: {fileID: 11400000, guid: dbcab237d0f124b44bdbc46e36be94d2, type: 2}

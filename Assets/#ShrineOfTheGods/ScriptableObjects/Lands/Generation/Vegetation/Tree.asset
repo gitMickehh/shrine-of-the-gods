@@ -15,5 +15,5 @@ MonoBehaviour:
   prefab: {fileID: 1745939291145203985, guid: 6aa2ab22607590f4fa5a6a05108043aa, type: 3}
   rarity: 3
   interactable: 0
-  sprite: {fileID: 21300000, guid: 803e8d9c60287e241aa6728d828d5f19, type: 3}
+  sprite: {fileID: 7404980997950364670, guid: 803e8d9c60287e241aa6728d828d5f19, type: 3}
   rottenSprite: {fileID: 0}

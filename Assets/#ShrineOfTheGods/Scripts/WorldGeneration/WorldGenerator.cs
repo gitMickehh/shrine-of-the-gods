@@ -4,9 +4,14 @@ using System.Linq;
 using UnityEngine;
 
 [System.Serializable] 
-public struct SpawnPoint {
+public class SpawnPoint {
     public Transform spawnPos;
     public bool occupied;
+
+    public void Occupy(bool toggle)
+    {
+        occupied = toggle;
+    }
 }
 
 public class WorldGenerator : MonoBehaviour

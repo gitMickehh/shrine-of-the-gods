@@ -7,5 +7,5 @@ public abstract class S_GenerationElement : ScriptableObject
     public GameObject prefab;
     [Range(1,4)]public int rarity = 1;
 
-    public abstract GameObject SpawnInWorld(Transform spawnPoint);
+    public abstract GameObject SpawnInWorld();
 }

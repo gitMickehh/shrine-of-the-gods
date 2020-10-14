@@ -9,9 +9,9 @@ public class S_Vegetation : S_GenerationElement
     public Sprite sprite;
     public Sprite rottenSprite;
 
-    public override GameObject SpawnInWorld(Transform spawnPoint)
+    public override GameObject SpawnInWorld()
     {
-        var vegObj = Instantiate(prefab, spawnPoint);
+        var vegObj = Instantiate(prefab, Vector3.zero, Quaternion.identity);
 
         var veg = vegObj.GetComponent<Vegetation>();
         veg.SetVegetation(this);

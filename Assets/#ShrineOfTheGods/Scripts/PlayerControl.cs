@@ -127,11 +127,10 @@ public class PlayerControl : MonoBehaviour
 
     void Interact()
     {
-        // currentInteractable = GetNearestInteractable();
+        currentInteractable = GetNearestInteractable();
         if (currentInteractable != null)
         {
             currentInteractable.Interact();
-            currentInteractable = null;
         }
     }
 

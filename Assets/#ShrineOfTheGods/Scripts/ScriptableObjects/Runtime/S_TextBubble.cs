@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "Text Bubble!", menuName = "Basic/Conversation/Text Bubble")]
-public class S_TextBubble : S_RealtimeObject<TextBubble>
+public class S_TextBubble : S_RuntimeObject<TextBubble>
 {
     // public void GenerateTextBubble()
     // {

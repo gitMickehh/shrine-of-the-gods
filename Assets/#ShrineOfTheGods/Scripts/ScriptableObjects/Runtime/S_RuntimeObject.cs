@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class S_RealtimeObject<T> : ScriptableObject
+public class S_RuntimeObject<T> : ScriptableObject
 {
     private T value = default(T);
 
