@@ -73,26 +73,53 @@ public class WorldGenerator : MonoBehaviour
                 {
                     int r = Random.Range(0, landTemplates.Count);
                     var landObj = Instantiate(landTemplates[r], GetCellPosition(i, j), Quaternion.identity);
+                    landObj.transform.SetParent(transform);
 
                     var land = landObj.GetComponent<PieceOfLand>();
-                    
+
+                    S_LandType selectedType;
+
                     if(types.Count <= 0)
                     {
                         types = GetLandsBasedOnRarity();
                         int rType = Random.Range(0, types.Count);
-                        land.GenerateLand(types[rType]);
+                        selectedType = types[rType];
+
+                        
                         types.RemoveAt(rType);
                     }
                     else if(types.Count == 1)
                     {
-                        land.GenerateLand(types[0]);
+                        selectedType = types[0];
                         types.RemoveAt(0);
                     }
                     else
                     {
                         int rType = Random.Range(0, types.Count);
-                        land.GenerateLand(types[rType]);
+                        selectedType = types[rType];
                         types.RemoveAt(rType);
+                    }
+
+                    float randomGodCheck = Random.Range(0,1.0f);
+                    if(randomGodCheck <= 0.4f && gods.Count > 0)
+                    {
+                        int randomGodIndex;
+
+                        if (gods.Count == 1)
+                        {
+                            randomGodIndex = 0;
+                        }
+                        else
+                        {
+                            randomGodIndex = Random.Range(0, gods.Count);
+                        }
+
+                        land.GenerateLand(selectedType, SpawnShrine(transform, gods[randomGodIndex]).gameObject);
+                        gods.RemoveAt(randomGodIndex);
+                    }
+                    else
+                    {
+                        land.GenerateLand(selectedType);
                     }
 
                     lands.Add(land);
@@ -100,6 +127,7 @@ public class WorldGenerator : MonoBehaviour
             }
         }
     }
+
 
     public GodShrine SpawnShrine(Transform spawnPoint, S_God god)
     {

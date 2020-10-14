@@ -14,14 +14,25 @@ public class PieceOfLand : MonoBehaviour
 
     List<GameObject> spawnedObjects;
 
-    public void GenerateLand(S_LandType landType)
+    public void GenerateLand(S_LandType landType, GameObject shrine = null)
     {
         land = landType;
         landRenderer.color = land.landColor;
         spawnedObjects = new List<GameObject>();
 
+        if(shrine != null)
+        {
+            //place shrine here :)
+            AddObjectToSpawnPoint(NextSpawnPointIndex(),shrine);
+        }
+
         //Randomly Generate items here
         var templatesToSpawn = land.GetTemplatesBasedOnRarity();
+        GenerateItems(templatesToSpawn);
+    }
+
+    private void GenerateItems(List<S_GenerationElement> templates)
+    {
 
     }
 
