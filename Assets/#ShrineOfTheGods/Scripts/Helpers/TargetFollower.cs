@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Camera2DOffset : MonoBehaviour
+public class TargetFollower : MonoBehaviour
 {
+    public bool active = true;
     public Transform target;
     [Range(0, 20)] public float smoothSpeed = 5f;
 
@@ -51,6 +52,23 @@ public class Camera2DOffset : MonoBehaviour
     }
 
     private void FixedUpdate()
+    {
+        if(active)
+            FollowTarget();
+    }
+
+    public void StartFollowing(Transform targetToFollow)
+    {
+        target = targetToFollow;
+        active = true;
+    }
+
+    public void StopFollowing()
+    {
+        active = false;
+    }
+
+    private void FollowTarget()
     {
         Vector3 desiredPosition = target.position + currentOffset;
 

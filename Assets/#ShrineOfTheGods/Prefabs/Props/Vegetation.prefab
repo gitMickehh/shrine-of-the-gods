@@ -94,6 +94,9 @@ GameObject:
   - component: {fileID: 949136198674619106}
   - component: {fileID: 867356141324365119}
   - component: {fileID: 1745939291145203984}
+  - component: {fileID: 556393178842491033}
+  - component: {fileID: 7050972918107182426}
+  - component: {fileID: 8818801911948035800}
   m_Layer: 8
   m_Name: Vegetation
   m_TagString: Untagged
@@ -177,6 +180,66 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   plantTemplate: {fileID: 0}
   plantRenderer: {fileID: 1745939290348565420}
+--- !u!114 &556393178842491033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1745939291145203985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d92324aa3cad5364fb5602176eeef181, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactionIndicator: {fileID: 0}
+  onInteract:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7050972918107182426}
+        m_MethodName: CollectItem
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &7050972918107182426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1745939291145203985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1af6ab6b26217a34abb90df4c9cb8182, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerInventory: {fileID: 11400000, guid: b3b5762763a431a48942e650343548a4, type: 2}
+  collected: 0
+  follower: {fileID: 8818801911948035800}
+--- !u!114 &8818801911948035800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1745939291145203985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b088e5d9e3df75346a6caf24dc57c2e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  active: 0
+  target: {fileID: 0}
+  smoothSpeed: 2
+  Offset: {x: -0.5, y: 0, z: 0}
+  playerDirection: {fileID: 11400000, guid: f5c6b74ce3c123e42a86a1bc8b35be53, type: 2}
+  threhsold: {x: 0.05, y: 0.05}
 --- !u!1 &7925953310571114346
 GameObject:
   m_ObjectHideFlags: 0

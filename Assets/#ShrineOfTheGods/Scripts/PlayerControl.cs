@@ -21,6 +21,7 @@ public class PlayerControl : MonoBehaviour
     public float interactionRange = 2f;
     public LayerMask interactablesLayer;
     private IInteractable currentInteractable;
+    public S_Inventory myInventory;
 
     [Header("Animation")]
     public Animator myAnimator;
@@ -29,6 +30,13 @@ public class PlayerControl : MonoBehaviour
     private void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();
+        myInventory.player = this;
+    }
+
+    private void OnDisable()
+    {
+        myInventory.player = null;
+        myInventory.Value = null;
     }
 
     public void EnableControl()

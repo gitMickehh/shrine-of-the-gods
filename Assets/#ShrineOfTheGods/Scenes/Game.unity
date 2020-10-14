@@ -960,6 +960,7 @@ MonoBehaviour:
   interactablesLayer:
     serializedVersion: 2
     m_Bits: 256
+  myInventory: {fileID: 11400000, guid: b3b5762763a431a48942e650343548a4, type: 2}
   myAnimator: {fileID: 2127808043}
 --- !u!50 &484906688
 Rigidbody2D:
@@ -2110,6 +2111,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b088e5d9e3df75346a6caf24dc57c2e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  active: 1
   target: {fileID: 484906686}
   smoothSpeed: 2
   Offset: {x: 1.5, y: 0, z: -10}

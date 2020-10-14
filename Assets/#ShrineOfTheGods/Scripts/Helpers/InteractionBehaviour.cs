@@ -11,17 +11,20 @@ public class InteractionBehaviour : MonoBehaviour, IInteractable
 
     private void Start()
     {
-        interactionIndicator.SetActive(false);
+        if(interactionIndicator != null)
+            interactionIndicator.SetActive(false);
     }
 
     public void IndicateInteractionStart()
     {
-        interactionIndicator.SetActive(true);
+        if(interactionIndicator != null)
+            interactionIndicator.SetActive(true);
     }
 
     public void IndicateInteractionEnd()
     {
-        interactionIndicator.SetActive(false);
+        if(interactionIndicator != null)
+            interactionIndicator.SetActive(false);
     }
 
 
