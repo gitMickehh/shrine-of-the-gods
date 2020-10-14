@@ -5,6 +5,8 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class PlayerControl : MonoBehaviour
 {
+    [SerializeField] private bool controlable;
+
     Rigidbody2D _rb;
     Vector2 movementDirection;
     float movementSpeed;
@@ -23,12 +25,10 @@ public class PlayerControl : MonoBehaviour
     [Header("Animation")]
     public Animator myAnimator;
 
-    private bool controlable;
 
     private void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();
-        EnableControl();
     }
 
     public void EnableControl()

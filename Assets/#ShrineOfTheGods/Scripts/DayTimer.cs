@@ -6,10 +6,14 @@ public class DayTimer : MonoBehaviour
 {
     bool running = false;
     public float neutralDayTime = 60f;
+    public S_Float maxDayTime;
     [SerializeField][Range(0.8f,1.2f)]private float dayTimeMultiplier = 1f;
 
     private float currentDayTime;
     public S_Float currentTime;
+
+    [Header("Variables")]
+    public S_Float timeMultiplyer;
 
     [Header("Events")]
     public GameEvent dayStart;
@@ -17,13 +21,15 @@ public class DayTimer : MonoBehaviour
 
     private void Start()
     {
-        StartTimer(1);
+        EndTimer();
     }
 
-    private void StartTimer(float multiplyer)
+    public void StartTimer()
     {
-        dayTimeMultiplier = Mathf.Clamp(multiplyer,0.8f,1.2f);
+        dayTimeMultiplier = Mathf.Clamp(timeMultiplyer.Value, 0.8f,1.2f);
         currentDayTime = neutralDayTime * dayTimeMultiplier;
+        maxDayTime.Value = currentDayTime;
+
         currentTime.Value = 0;
         running = true;
 
