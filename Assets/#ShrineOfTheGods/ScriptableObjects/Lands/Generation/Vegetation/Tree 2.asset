@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 185c1349adef047468207bee63aca8a3, type: 3}
-  m_Name: Tree
+  m_Name: Tree 2
   m_EditorClassIdentifier: 
-  prefab: {fileID: 1745939291145203985, guid: 6aa2ab22607590f4fa5a6a05108043aa, type: 3}
-  rarity: 3
+  prefab: {fileID: 1745939291145203985, guid: 85ef175d2e8754e40bb6f1d1a454105b, type: 3}
+  rarity: 2
   interactable: 0
-  sprite: {fileID: 7404980997950364670, guid: 803e8d9c60287e241aa6728d828d5f19, type: 3}
+  sprite: {fileID: -4127545996262774045, guid: 57e8c1c5a9db983458a7e91325d3a411, type: 3}
   rottenSprite: {fileID: 0}

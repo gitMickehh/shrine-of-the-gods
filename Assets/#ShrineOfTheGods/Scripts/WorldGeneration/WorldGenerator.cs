@@ -81,7 +81,6 @@ public class WorldGenerator : MonoBehaviour
                     landObj.transform.SetParent(transform);
 
                     var land = landObj.GetComponent<PieceOfLand>();
-
                     S_LandType selectedType;
 
                     if(types.Count <= 0)
@@ -89,7 +88,6 @@ public class WorldGenerator : MonoBehaviour
                         types = GetLandsBasedOnRarity();
                         int rType = Random.Range(0, types.Count);
                         selectedType = types[rType];
-
                         
                         types.RemoveAt(rType);
                     }
@@ -104,39 +102,71 @@ public class WorldGenerator : MonoBehaviour
                         selectedType = types[rType];
                         types.RemoveAt(rType);
                     }
-
-                    float randomGodCheck = Random.Range(0,1.0f);
-                    if(randomGodCheck <= 0.4f && gods.Count > 0)
-                    {
-                        int randomGodIndex;
-
-                        if (gods.Count == 1)
-                        {
-                            randomGodIndex = 0;
-                        }
-                        else
-                        {
-                            randomGodIndex = Random.Range(0, gods.Count);
-                        }
-
-                        land.GenerateLand(selectedType, SpawnShrine(transform, gods[randomGodIndex]).gameObject);
-                        gods.RemoveAt(randomGodIndex);
-                    }
-                    else
-                    {
-                        land.GenerateLand(selectedType);
-                    }
-
+                 
+                    land.GenerateLand(selectedType);
                     lands.Add(land);
+                }
+            }
+        }
+        
+        SpawnShrinesInLand();
+        GenerateLandsItems();
+    }
+
+    private void SpawnShrinesInLand()
+    {
+        int rStart = Random.Range(0, Mathf.FloorToInt(lands.Count / 4.0f));
+        PlaceRandomShrine(rStart);
+
+        int shrineDistance = 1;
+        int maxShrineDistance = Random.Range(2, Mathf.FloorToInt((worldSize.x * worldSize.y) / 3));
+
+        for (int i = rStart + 1; i < lands.Count; i++)
+        {
+            if (gods.Count <= 0)
+                return;
+
+            if (shrineDistance >= maxShrineDistance)
+            {
+                //must spawn god now
+                PlaceRandomShrine(i);
+                shrineDistance = 1;
+            }
+            else
+            {
+                float randomChanceToSpawnGod = Random.Range(0,1.0f);
+                if(randomChanceToSpawnGod <= 0.45f)
+                {
+                    //spawn god :)
+                    PlaceRandomShrine(i);
+                    shrineDistance = 1;
+                }
+                else
+                {
+                    shrineDistance++;
                 }
             }
         }
     }
 
-
-    public GodShrine SpawnShrine(Transform spawnPoint, S_God god)
+    private void PlaceRandomShrine(int landIndex)
     {
-        var shrineObj = Instantiate(shrinePrefab, spawnPoint);
+        int randomGodIndex = Random.Range(0, gods.Count);
+        lands[landIndex].AddObjectRandomly(SpawnShrine(gods[randomGodIndex]).gameObject);
+        gods.RemoveAt(randomGodIndex);
+    }
+
+    private void GenerateLandsItems()
+    {
+        for (int i = 0; i < lands.Count; i++)
+        {
+            lands[i].GenerateLandItems();
+        }
+    }
+
+    public GodShrine SpawnShrine(S_God god)
+    {
+        var shrineObj = Instantiate(shrinePrefab, transform);
 
         var shrine = shrineObj.GetComponent<GodShrine>();
         shrine.TakeGod(god);

@@ -70,7 +70,7 @@ SpriteRenderer:
   m_SortingLayerID: 1666728267
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: -9051100846552327761, guid: 59854a137a992cf46a66c5372177e4dd,
+  m_Sprite: {fileID: -4127545996262774045, guid: 57e8c1c5a9db983458a7e91325d3a411,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 867356141324365119}
   - component: {fileID: 1745939291145203984}
   m_Layer: 8
-  m_Name: Vegetation
+  m_Name: Vegetation_Tree
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -113,6 +113,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 8275936422092391779}
+  - {fileID: 2080240234720784768}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -129,7 +130,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.11636096}
+  m_Offset: {x: 0, y: 0.15662259}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -140,7 +141,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.7115151, y: 0.22830045}
+  m_Size: {x: 0.19082703, y: 0.3088237}
   m_EdgeRadius: 0
 --- !u!50 &867356141324365119
 Rigidbody2D:
@@ -220,3 +221,110 @@ SortingGroup:
   m_SortingLayerID: 1666728267
   m_SortingLayer: 2
   m_SortingOrder: 0
+--- !u!1001 &352597918187421847
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1745939291145203991}
+    m_Modifications:
+    - target: {fileID: 949136198674619106, guid: 6aa2ab22607590f4fa5a6a05108043aa,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 949136198674619106, guid: 6aa2ab22607590f4fa5a6a05108043aa,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.3282089
+      objectReference: {fileID: 0}
+    - target: {fileID: 949136198674619106, guid: 6aa2ab22607590f4fa5a6a05108043aa,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 0.06913859
+      objectReference: {fileID: 0}
+    - target: {fileID: 949136198674619106, guid: 6aa2ab22607590f4fa5a6a05108043aa,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 0.1338557
+      objectReference: {fileID: 0}
+    - target: {fileID: 1745939290348565420, guid: 6aa2ab22607590f4fa5a6a05108043aa,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1552180663807121169, guid: 57e8c1c5a9db983458a7e91325d3a411,
+        type: 3}
+    - target: {fileID: 1745939291145203984, guid: 6aa2ab22607590f4fa5a6a05108043aa,
+        type: 3}
+      propertyPath: plantTemplate
+      value: 
+      objectReference: {fileID: 11400000, guid: 11c32b612d059c1409e234f948678f57,
+        type: 2}
+    - target: {fileID: 1745939291145203985, guid: 6aa2ab22607590f4fa5a6a05108043aa,
+        type: 3}
+      propertyPath: m_Name
+      value: Apple
+      objectReference: {fileID: 0}
+    - target: {fileID: 1745939291145203991, guid: 6aa2ab22607590f4fa5a6a05108043aa,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1745939291145203991, guid: 6aa2ab22607590f4fa5a6a05108043aa,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 1745939291145203991, guid: 6aa2ab22607590f4fa5a6a05108043aa,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1745939291145203991, guid: 6aa2ab22607590f4fa5a6a05108043aa,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1745939291145203991, guid: 6aa2ab22607590f4fa5a6a05108043aa,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1745939291145203991, guid: 6aa2ab22607590f4fa5a6a05108043aa,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1745939291145203991, guid: 6aa2ab22607590f4fa5a6a05108043aa,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1745939291145203991, guid: 6aa2ab22607590f4fa5a6a05108043aa,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1745939291145203991, guid: 6aa2ab22607590f4fa5a6a05108043aa,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1745939291145203991, guid: 6aa2ab22607590f4fa5a6a05108043aa,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1745939291145203991, guid: 6aa2ab22607590f4fa5a6a05108043aa,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6aa2ab22607590f4fa5a6a05108043aa, type: 3}
+--- !u!4 &2080240234720784768 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1745939291145203991, guid: 6aa2ab22607590f4fa5a6a05108043aa,
+    type: 3}
+  m_PrefabInstance: {fileID: 352597918187421847}
+  m_PrefabAsset: {fileID: 0}

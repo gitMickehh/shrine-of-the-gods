@@ -5,6 +5,9 @@ TextureImporter:
   - first:
       213: 1871454365446325388
     second: UI_ChatBubble
+  - first:
+      213: -4640330509532052334
+    second: Icon_Sun
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -130,6 +133,27 @@ TextureImporter:
       bones: []
       spriteID: c8448c974ddb8f910800000000000000
       internalID: 1871454365446325388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icon_Sun
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 70
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2944fe2bcfb3a9fb0800000000000000
+      internalID: -4640330509532052334
       vertices: []
       indices: 
       edges: []

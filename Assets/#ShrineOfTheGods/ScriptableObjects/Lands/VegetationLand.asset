@@ -15,7 +15,6 @@ MonoBehaviour:
   rarity: 3
   landColor: {r: 0.21176472, g: 0.7490196, b: 0.3529412, a: 1}
   spawningTemplates:
-  - {fileID: 11400000, guid: 70df22be05a120e469e79ad14a6a97e8, type: 2}
+  - {fileID: 11400000, guid: 1fbd8b46cd6ef0f4bb8f60475cf5bfa5, type: 2}
   - {fileID: 11400000, guid: 0e683a57769665e4484e5a1445592ce7, type: 2}
   - {fileID: 11400000, guid: ce5db2d6bb27a25489fe01e5a954a498, type: 2}
-  - {fileID: 11400000, guid: 1fbd8b46cd6ef0f4bb8f60475cf5bfa5, type: 2}

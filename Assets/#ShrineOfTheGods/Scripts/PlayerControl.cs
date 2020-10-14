@@ -51,7 +51,7 @@ public class PlayerControl : MonoBehaviour
         IndicateInteractability();
         ProcessKeyboardInput();
         Move();
-        Animate();
+        //Animate();
     }
 
     void ProcessKeyboardInput()
@@ -122,8 +122,28 @@ public class PlayerControl : MonoBehaviour
             currentInteractable.IndicateInteractionEnd();
             currentInteractable = interactable;
             currentInteractable.IndicateInteractionStart();
+
+            //SetDirectionBetweenPlayerAndInteractable();
         }
+
     }
+
+    //private void SetDirectionBetweenPlayerAndInteractable()
+    //{
+    //      //for camera smoothing and all :) but nvm
+    //    Vector2 newDirection = currentInteractable.GetPosition() - direction;
+    //    Vector2 absDirection = new Vector2(Mathf.Sign(newDirection.x), Mathf.Sign(newDirection.y));
+    //    if (newDirection.x == 0)
+    //    {
+    //        absDirection.x = playerAbsoluteDirection.Value.x;
+    //    }
+    //    if (newDirection.y == 0)
+    //    {
+    //        absDirection.y = playerAbsoluteDirection.Value.y;
+    //    }
+
+    //    playerAbsoluteDirection.Value = absDirection;
+    //}
 
     void Interact()
     {

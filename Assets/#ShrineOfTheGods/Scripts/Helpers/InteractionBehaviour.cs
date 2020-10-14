@@ -29,4 +29,9 @@ public class InteractionBehaviour : MonoBehaviour, IInteractable
     {
         onInteract.Invoke();
     }
+
+    public Vector2 GetPosition()
+    {
+        return transform.position;
+    }
 }

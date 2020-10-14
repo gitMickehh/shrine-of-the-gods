@@ -137,4 +137,8 @@ public class Talker : MonoBehaviour, IInteractable
         return sentence;
     }
 
+    public Vector2 GetPosition()
+    {
+        return transform.position;
+    }
 }

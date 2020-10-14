@@ -8,5 +8,7 @@ public interface IInteractable
     void IndicateInteractionStart();
     void IndicateInteractionEnd();
     void Interact();
+
+    Vector2 GetPosition();
 }
 

@@ -17,6 +17,42 @@ TextureImporter:
   - first:
       213: 8264472552237614864
     second: Icon_ChatIndicator
+  - first:
+      213: 931242288735369777
+    second: Prop_ShrineScripture
+  - first:
+      213: -4852574532275230490
+    second: Prop_Shrine_Set
+  - first:
+      213: 4132240381495486393
+    second: Prop_Shrine_Thoth
+  - first:
+      213: 7993672439829780506
+    second: Prop_Shrine_Tefnut
+  - first:
+      213: 4573413723944379236
+    second: Prop_Shrine_Ra
+  - first:
+      213: 688713988671689497
+    second: Prop_Tree_1
+  - first:
+      213: -4127545996262774045
+    second: Prop_Tree_2
+  - first:
+      213: -1552180663807121169
+    second: Veg_Apple
+  - first:
+      213: -7680095431372583293
+    second: BG_Flower_4
+  - first:
+      213: -9216443640028287757
+    second: BG_Flower_3
+  - first:
+      213: -1801447544284754440
+    second: BG_Flower_2
+  - first:
+      213: -8523000742058810607
+    second: BG_Flower_1
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -205,6 +241,258 @@ TextureImporter:
       bones: []
       spriteID: 017c61ccffd41b270800000000000000
       internalID: 8264472552237614864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prop_ShrineScripture
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 78
+        width: 7
+        height: 15
+      alignment: 9
+      pivot: {x: 0.5, y: 0.06}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13ab4eb7def6cec00800000000000000
+      internalID: 931242288735369777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prop_Shrine_Set
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 77
+        width: 12
+        height: 17
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e8a0a54c2138acb0800000000000000
+      internalID: -4852574532275230490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prop_Shrine_Thoth
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 78
+        width: 6
+        height: 12
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b72091cbbaa85930800000000000000
+      internalID: 4132240381495486393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prop_Shrine_Tefnut
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 78
+        width: 8
+        height: 12
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1852e25bba3fee60800000000000000
+      internalID: 7993672439829780506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prop_Shrine_Ra
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 78
+        width: 6
+        height: 13
+      alignment: 9
+      pivot: {x: 0.5, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 463e99a0d87087f30800000000000000
+      internalID: 4573413723944379236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prop_Tree_1
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 33
+        width: 11
+        height: 35
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9135e9649bdce8900800000000000000
+      internalID: 688713988671689497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Prop_Tree_2
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 33
+        width: 12
+        height: 36
+      alignment: 9
+      pivot: {x: 0.5, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3eaebaaf8c208b6c0800000000000000
+      internalID: -4127545996262774045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Veg_Apple
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 3
+        width: 5
+        height: 8
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe8eb8af8eb857ae0800000000000000
+      internalID: -1552180663807121169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_Flower_4
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 2
+        width: 3
+        height: 4
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38ecfe365e1da6590800000000000000
+      internalID: -7680095431372583293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_Flower_3
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 2
+        width: 3
+        height: 4
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fca4b7175d981080800000000000000
+      internalID: -9216443640028287757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_Flower_2
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 2
+        width: 3
+        height: 4
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fd4861c009fff6e0800000000000000
+      internalID: -1801447544284754440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BG_Flower_1
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 2
+        width: 3
+        height: 4
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 113a13d5bf738b980800000000000000
+      internalID: -8523000742058810607
       vertices: []
       indices: 
       edges: []

@@ -14,19 +14,15 @@ public class PieceOfLand : MonoBehaviour
 
     List<GameObject> spawnedObjects;
 
-    public void GenerateLand(S_LandType landType, GameObject shrine = null)
+    public void GenerateLand(S_LandType landType)
     {
         land = landType;
         landRenderer.color = land.landColor;
         spawnedObjects = new List<GameObject>();
+    }
 
-        if(shrine != null)
-        {
-            //place shrine here :)
-            AddObjectToSpawnPoint(NextSpawnPointIndex(),shrine);
-        }
-
-        //Randomly Generate items here
+    public void GenerateLandItems()
+    {
         var templatesToSpawn = land.GetTemplatesBasedOnRarity();
         GenerateItems(templatesToSpawn);
     }
@@ -39,6 +35,18 @@ public class PieceOfLand : MonoBehaviour
             var elm = templates[r].SpawnInWorld();
             AddObjectToSpawnPoint(NextSpawnPointIndex(), elm);
         }
+    }
+
+    public bool AddObjectRandomly(GameObject obj)
+    {
+        if(!HasAvailableSpawnPoint())
+        {
+            return false;
+        }
+
+        AddObjectToSpawnPoint(RandomSpawnPoint(),obj);
+
+        return true;
     }
 
     public bool HasAvailableSpawnPoint()
@@ -73,7 +81,7 @@ public class PieceOfLand : MonoBehaviour
     }
 
 
-    public void AddObjectToSpawnPoint(SpawnPoint spawnPoint, GameObject gObject)
+    private void AddObjectToSpawnPoint(SpawnPoint spawnPoint, GameObject gObject)
     {
         if (!spawnPoint.occupied)
         {
@@ -85,7 +93,7 @@ public class PieceOfLand : MonoBehaviour
         }
     }
 
-    public void AddObjectToSpawnPoint(int spawnPointIndex, GameObject gObject)
+    private void AddObjectToSpawnPoint(int spawnPointIndex, GameObject gObject)
     {
         if(!spawnPositions[spawnPointIndex].occupied)
         {

@@ -3,11 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class Vegetation : MonoBehaviour, IInteractable
+public class Vegetation : MonoBehaviour
 {
     public S_Vegetation plantTemplate;
     public SpriteRenderer plantRenderer;
     private bool interactable;
+
+    [ContextMenu("Refine Look")]
+    public void RefineLook()
+    {
+        transform.name = plantTemplate.name;
+        plantRenderer.sprite = plantTemplate.sprite;
+        interactable = plantTemplate.interactable;
+    }
 
     public void SetVegetation(S_Vegetation veg)
     {
@@ -18,21 +26,4 @@ public class Vegetation : MonoBehaviour, IInteractable
         interactable = veg.interactable;
     }
 
-    public void IndicateInteractionEnd()
-    {
-        if (!interactable)
-            return;
-    }
-
-    public void IndicateInteractionStart()
-    {
-        if (!interactable)
-            return;
-    }
-
-    public void Interact()
-    {
-        if (!interactable)
-            return;
-    }
 }
