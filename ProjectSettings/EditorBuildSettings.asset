@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/#ShrineOfTheGods/Scenes/MainMenu.unity
+    guid: b8b1c1fb06a8f444d9dd62050242a8aa
+  - enabled: 1
+    path: Assets/#ShrineOfTheGods/Scenes/Game.unity
+    guid: de92636f7ac7cb247bbe08c787686ed6
   m_configObjects: {}

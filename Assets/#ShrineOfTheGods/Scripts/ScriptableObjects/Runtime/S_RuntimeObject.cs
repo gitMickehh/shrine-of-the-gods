@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class S_RuntimeObject<T> : ScriptableObject
 {
-    private T value = default(T);
+    [SerializeField]private T value = default(T);
 
     public T Value { get => value; set { this.value = value; onValueChanged?.Invoke(); } }
 

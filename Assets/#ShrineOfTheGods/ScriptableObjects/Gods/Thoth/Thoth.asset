@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 408100be4a2ca49409a06ed8b7694cd9, type: 3}
   m_Name: Thoth
   m_EditorClassIdentifier: 
-  godDescription: God of writing
+  godDescription: God of writing.
   godImage: {fileID: 21300000, guid: 05a3d1452a5224f409e7befcdee61545, type: 3}
   godShrine: {fileID: 4132240381495486393, guid: 57e8c1c5a9db983458a7e91325d3a411,
     type: 3}
   shrineConversation: {fileID: 11400000, guid: a99089dfacc246d428c4b84d0206200f, type: 2}
   godConversation: {fileID: 11400000, guid: dbcab237d0f124b44bdbc46e36be94d2, type: 2}
+  currentPower: {fileID: 11400000, guid: 4b6c4e4e4dce5ec4f8cebbe1d65b0966, type: 2}

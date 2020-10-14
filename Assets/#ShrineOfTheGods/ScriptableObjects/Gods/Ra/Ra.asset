@@ -18,3 +18,4 @@ MonoBehaviour:
     type: 3}
   shrineConversation: {fileID: 11400000, guid: eba89d0a44d4eb14a9d7add3b3587ab0, type: 2}
   godConversation: {fileID: 11400000, guid: b59f4aed63a882d4198508d717d8c0e6, type: 2}
+  currentPower: {fileID: 11400000, guid: 6d07619e5fd5cdd4293d85cfdb2b4ddf, type: 2}
