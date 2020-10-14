@@ -14,5 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentConversation: 0
   loopConverastion: 1
-  CharacterName: 
-  conversations: []
+  inOrder: 0
+  CharacterName: Set's Shrine
+  conversations:
+  - name: Shrine
+    sentences:
+    - Kneel before your unescapable fate.
+    - I command death, and you shall join my army.

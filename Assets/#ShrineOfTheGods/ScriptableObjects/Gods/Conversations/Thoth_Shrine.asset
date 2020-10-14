@@ -14,5 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentConversation: 0
   loopConverastion: 1
-  CharacterName: 
-  conversations: []
+  inOrder: 0
+  CharacterName: Thoth's Shrine
+  conversations:
+  - name: Shrine
+    sentences:
+    - Knowledge is the ultimate power.
+    - Seize your moments.
+    - CARPE DIEM!

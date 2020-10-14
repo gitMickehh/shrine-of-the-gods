@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class ImageSlicedToValue : MonoBehaviour
 {
+    public bool reversed;
+
     public Image slicedImage;
     public S_Float value;
     public S_Float totalValue;
@@ -17,6 +19,9 @@ public class ImageSlicedToValue : MonoBehaviour
 
     private void Update()
     {
-        slicedImage.fillAmount = (totalValueFloat - value.Value)/ totalValueFloat;
+        if(!reversed)
+            slicedImage.fillAmount = (totalValueFloat - value.Value)/ totalValueFloat;
+        else
+            slicedImage.fillAmount = value.Value / totalValueFloat;
     }
 }

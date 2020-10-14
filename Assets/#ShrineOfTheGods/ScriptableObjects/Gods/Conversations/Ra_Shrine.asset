@@ -14,5 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentConversation: 0
   loopConverastion: 1
-  CharacterName: 
-  conversations: []
+  inOrder: 0
+  CharacterName: Ra's Shrine
+  conversations:
+  - name: Shrine
+    sentences:
+    - I am the god of the son.
+    - I shall light up your day.
+    - I shall give you warmth.

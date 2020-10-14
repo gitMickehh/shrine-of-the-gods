@@ -152,7 +152,7 @@ public class WorldGenerator : MonoBehaviour
     private void PlaceRandomShrine(int landIndex)
     {
         int randomGodIndex = Random.Range(0, gods.Count);
-        lands[landIndex].AddObjectRandomly(SpawnShrine(gods[randomGodIndex]).gameObject);
+        lands[landIndex].AddObjectRandomly(SpawnShrine(gods[randomGodIndex]));
         gods.RemoveAt(randomGodIndex);
     }
 
@@ -164,13 +164,13 @@ public class WorldGenerator : MonoBehaviour
         }
     }
 
-    public GodShrine SpawnShrine(S_God god)
+    public GameObject SpawnShrine(S_God god)
     {
         var shrineObj = Instantiate(shrinePrefab, transform);
 
-        var shrine = shrineObj.GetComponent<GodShrine>();
+        var shrine = shrineObj.GetComponentInChildren<GodShrine>();
         shrine.TakeGod(god);
-        return shrine;
+        return shrineObj;
     }
 
     private Vector3 GetCellPosition(int x, int y)

@@ -14,5 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentConversation: 0
   loopConverastion: 1
-  CharacterName: 
-  conversations: []
+  inOrder: 1
+  CharacterName: ttt
+  conversations:
+  - name: ttt
+    sentences:
+    - ttt

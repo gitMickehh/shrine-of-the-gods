@@ -8,13 +8,15 @@ public class GodShrine : MonoBehaviour
     
     [Header("References")]
     public SpriteRenderer shrineImage;
-    
+    public Talker shrineTalker;
+
     public void TakeGod(S_God newGod)
     {
         god = newGod;
 
         transform.name = god.name;
         shrineImage.sprite = god.godShrine;
+        shrineTalker.conversationPiece = god.shrineConversation;
     }
 
     public void PayRespects()

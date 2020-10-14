@@ -28,7 +28,6 @@ public class Talker : MonoBehaviour, IInteractable
     private void Start()
     {
         conversationIcon.SetActive(false);
-        //currentConversationNumber = conversationPiece.currentConversation;
         sentenceFinished = true;
     }
 

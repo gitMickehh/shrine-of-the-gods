@@ -14,5 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentConversation: 0
   loopConverastion: 1
-  CharacterName: 
-  conversations: []
+  inOrder: 0
+  CharacterName: Tefnut's Shrine
+  conversations:
+  - name: Shrine
+    sentences:
+    - My daughter Earth is in your hands.
+    - Learn to love everything around you.
+    - Flowers are enough my dear.
