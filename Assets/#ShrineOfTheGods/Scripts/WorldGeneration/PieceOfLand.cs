@@ -21,6 +21,8 @@ public class PieceOfLand : MonoBehaviour
         spawnedObjects = new List<GameObject>();
 
         //Randomly Generate items here
+        var templatesToSpawn = land.GetTemplatesBasedOnRarity();
+
     }
 
     public bool HasAvailableSpawnPoint()

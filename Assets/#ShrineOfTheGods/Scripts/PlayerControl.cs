@@ -12,6 +12,7 @@ public class PlayerControl : MonoBehaviour
     [Header("Movement")]
     public float moveSpeed = 10f;
     [HideInInspector] public Vector2 direction;
+    public S_Vector2 playerAbsoluteDirection;
 
     [Header("Interaction")]
     public Vector2 interactionOffset = new Vector2(0, 0.5f);
@@ -74,6 +75,18 @@ public class PlayerControl : MonoBehaviour
         if (movementDirection != Vector2.zero)
         {
             direction = movementDirection;
+
+            Vector2 absDirection = new Vector2(Mathf.Sign(direction.x), Mathf.Sign(direction.y));
+            if(direction.x == 0)
+            {
+                absDirection.x = playerAbsoluteDirection.Value.x;
+            }
+            if (direction.y == 0)
+            {
+                absDirection.y = playerAbsoluteDirection.Value.y;
+            }
+
+            playerAbsoluteDirection.Value = absDirection;
         }
     }
 

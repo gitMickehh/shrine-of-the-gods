@@ -171,6 +171,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: a663466ed3c985940a347ed766314682, type: 2}
   landTypes:
   - {fileID: 11400000, guid: 8f11e7d87e97fef4589fa2b7ea0deea2, type: 2}
+  - {fileID: 11400000, guid: 5a60dde3c4f9b9247ab5102b0e201964, type: 2}
   landTemplates:
   - {fileID: 6770097510449477619, guid: 5afa6e7435932dd478c9636321ef3eb7, type: 3}
   - {fileID: 3714729912467455269, guid: 110fa5ba5d955d24696d5a463007a49c, type: 3}
@@ -351,8 +352,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b49a46282285184eaeaa878bfcace1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 6.5
+  moveSpeed: 5.5
   direction: {x: 0, y: 0}
+  playerAbsoluteDirection: {fileID: 11400000, guid: f5c6b74ce3c123e42a86a1bc8b35be53,
+    type: 2}
   interactionOffset: {x: 0, y: 0.5}
   interactionRange: 1.5
   interactablesLayer:
@@ -898,6 +901,7 @@ GameObject:
   - component: {fileID: 1096954441}
   - component: {fileID: 1096954440}
   - component: {fileID: 1096954443}
+  - component: {fileID: 1096954444}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1001,6 +1005,23 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
+--- !u!114 &1096954444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1096954439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b088e5d9e3df75346a6caf24dc57c2e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 484906686}
+  smoothSpeed: 1.5
+  offset: {x: 2.5, y: 2.5, z: -10}
+  playerDirection: {fileID: 11400000, guid: f5c6b74ce3c123e42a86a1bc8b35be53, type: 2}
+  threhsold: {x: 0.05, y: 0.05}
 --- !u!1 &1104135687
 GameObject:
   m_ObjectHideFlags: 0

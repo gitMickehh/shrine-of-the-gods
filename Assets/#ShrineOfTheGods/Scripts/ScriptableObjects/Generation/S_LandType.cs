@@ -9,5 +9,19 @@ public class S_LandType : ScriptableObject
     public Color landColor;
     public List<S_GenerationElement> spawningTemplates;
 
+    public List<S_GenerationElement> GetTemplatesBasedOnRarity()
+    {
+        List<S_GenerationElement> output = new List<S_GenerationElement>();
+
+        for (int i = 0; i < spawningTemplates.Count; i++)
+        {
+            for (int j = 0; j < spawningTemplates[i].rarity; j++)
+            {
+                output.Add(spawningTemplates[i]);
+            }
+        }
+
+        return output;
+    }
 
 }

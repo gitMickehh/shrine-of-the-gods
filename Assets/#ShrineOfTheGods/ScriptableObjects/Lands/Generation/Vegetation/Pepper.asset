@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Pepper
   m_EditorClassIdentifier: 
   prefab: {fileID: 1745939291145203985, guid: 6aa2ab22607590f4fa5a6a05108043aa, type: 3}
+  rarity: 2
   interactable: 1
   sprite: {fileID: 901124616619469773, guid: 59854a137a992cf46a66c5372177e4dd, type: 3}
   rottenSprite: {fileID: 0}

@@ -9,11 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 185c1349adef047468207bee63aca8a3, type: 3}
-  m_Name: Tree
+  m_Script: {fileID: 11500000, guid: 8bf77c9dc1daad346b47d6a72a14148f, type: 3}
+  m_Name: TreesLand
   m_EditorClassIdentifier: 
-  prefab: {fileID: 1745939291145203985, guid: 6aa2ab22607590f4fa5a6a05108043aa, type: 3}
   rarity: 3
-  interactable: 0
-  sprite: {fileID: 21300000, guid: 803e8d9c60287e241aa6728d828d5f19, type: 3}
-  rottenSprite: {fileID: 0}
+  landColor: {r: 0.21176472, g: 0.7490196, b: 0.3529412, a: 1}
+  spawningTemplates:
+  - {fileID: 11400000, guid: 1fbd8b46cd6ef0f4bb8f60475cf5bfa5, type: 2}
