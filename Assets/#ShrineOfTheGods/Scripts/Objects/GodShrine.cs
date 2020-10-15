@@ -9,6 +9,8 @@ public class GodShrine : MonoBehaviour
     [Header("References")]
     public SpriteRenderer shrineImage;
     public Talker shrineTalker;
+    public S_Inventory playerInventory;
+    public Transform sacraficePosition;
 
     public void TakeGod(S_God newGod)
     {
@@ -21,6 +23,20 @@ public class GodShrine : MonoBehaviour
 
     public void PayRespects()
     {
-        Debug.Log("Paying respects I see :)");
+
+        if(playerInventory.Value != null)
+        {
+            int retValue = god.GiveItem(playerInventory.Value);
+
+            playerInventory.Value.transform.position = sacraficePosition.position;
+            playerInventory.Value.transform.SetParent(sacraficePosition);
+            //negative impact on god
+            //VFX and SFX
+            playerInventory.Value.SacrificeItem(retValue);
+
+            return;
+        }
+
+        Debug.Log("No items");
     }
 }

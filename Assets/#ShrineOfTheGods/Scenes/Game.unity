@@ -176,6 +176,7 @@ MonoBehaviour:
   - {fileID: 6770097510449477619, guid: 5afa6e7435932dd478c9636321ef3eb7, type: 3}
   - {fileID: 3714729912467455269, guid: 110fa5ba5d955d24696d5a463007a49c, type: 3}
   - {fileID: 6594808923419284015, guid: 88a83d8b06b5cb94f954b93a58b4ea66, type: 3}
+  - {fileID: 6594808923419284015, guid: fc77cb665e0a8dc428a906188079385c, type: 3}
   shrinePrefab: {fileID: 587198650623118278, guid: 0cfa6445a88daf8459aa74c10471c9b6,
     type: 3}
   cellSize: {x: 14, y: 10}
@@ -2115,7 +2116,7 @@ MonoBehaviour:
   active: 1
   target: {fileID: 484906686}
   smoothSpeed: 2
-  Offset: {x: 1.5, y: 0, z: -10}
+  Offset: {x: 1.5, y: 2, z: -10}
   playerDirection: {fileID: 11400000, guid: f5c6b74ce3c123e42a86a1bc8b35be53, type: 2}
   threhsold: {x: 0.05, y: 0.05}
 --- !u!1 &1104135687

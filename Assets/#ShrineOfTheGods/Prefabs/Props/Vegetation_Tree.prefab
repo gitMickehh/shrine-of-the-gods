@@ -178,6 +178,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   plantTemplate: {fileID: 0}
   plantRenderer: {fileID: 1745939290348565420}
+  myCollectable: {fileID: 0}
 --- !u!1 &7925953310571114346
 GameObject:
   m_ObjectHideFlags: 0
@@ -320,6 +321,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7050972918107182426, guid: 6aa2ab22607590f4fa5a6a05108043aa,
+        type: 3}
+      propertyPath: myElement
+      value: 
+      objectReference: {fileID: 11400000, guid: 11c32b612d059c1409e234f948678f57,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6aa2ab22607590f4fa5a6a05108043aa, type: 3}
 --- !u!4 &2080240234720784768 stripped

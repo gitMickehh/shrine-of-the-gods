@@ -180,6 +180,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   plantTemplate: {fileID: 0}
   plantRenderer: {fileID: 1745939290348565420}
+  myCollectable: {fileID: 7050972918107182426}
 --- !u!114 &556393178842491033
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -219,9 +220,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1af6ab6b26217a34abb90df4c9cb8182, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myElement: {fileID: 0}
   playerInventory: {fileID: 11400000, guid: b3b5762763a431a48942e650343548a4, type: 2}
   collected: 0
   follower: {fileID: 8818801911948035800}
+  rb: {fileID: 867356141324365119}
 --- !u!114 &8818801911948035800
 MonoBehaviour:
   m_ObjectHideFlags: 0

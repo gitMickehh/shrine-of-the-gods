@@ -7,6 +7,7 @@ public class Vegetation : MonoBehaviour
 {
     public S_Vegetation plantTemplate;
     public SpriteRenderer plantRenderer;
+    public Collectable myCollectable;
     private bool interactable;
 
     [ContextMenu("Refine Look")]
@@ -15,6 +16,9 @@ public class Vegetation : MonoBehaviour
         transform.name = plantTemplate.name;
         plantRenderer.sprite = plantTemplate.sprite;
         interactable = plantTemplate.interactable;
+        
+        if(interactable)
+            myCollectable.myElement = plantTemplate;
     }
 
     public void SetVegetation(S_Vegetation veg)
@@ -23,7 +27,10 @@ public class Vegetation : MonoBehaviour
 
         plantTemplate = veg;
         plantRenderer.sprite = plantTemplate.sprite;
-        interactable = veg.interactable;
+        interactable = plantTemplate.interactable;
+
+        if(interactable)
+            myCollectable.myElement = plantTemplate;
     }
 
 }
