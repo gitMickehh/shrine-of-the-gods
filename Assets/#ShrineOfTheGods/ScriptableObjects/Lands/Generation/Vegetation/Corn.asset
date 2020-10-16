@@ -10,10 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 185c1349adef047468207bee63aca8a3, type: 3}
-  m_Name: Broccli
+  m_Name: Corn
   m_EditorClassIdentifier: 
   prefab: {fileID: 1745939291145203985, guid: 6aa2ab22607590f4fa5a6a05108043aa, type: 3}
   rarity: 2
   interactable: 1
-  sprite: {fileID: 5180442820827391154, guid: 59854a137a992cf46a66c5372177e4dd, type: 3}
-  rottenSprite: {fileID: 0}
+  sprite: {fileID: 2835281856350563105, guid: 57e8c1c5a9db983458a7e91325d3a411, type: 3}
+  rottenSprite: {fileID: -8391831140280515993, guid: 57e8c1c5a9db983458a7e91325d3a411,
+    type: 3}

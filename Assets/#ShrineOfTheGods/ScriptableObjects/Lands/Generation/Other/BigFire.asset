@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 1474790949693018013, guid: 370d7d49a9ce68a4886601c46ab6ce27, type: 3}
   rarity: 1
-  fireSprite: {fileID: 0}
+  fireSprite: {fileID: -633960717885166211, guid: 57e8c1c5a9db983458a7e91325d3a411,
+    type: 3}
   firePower: 3

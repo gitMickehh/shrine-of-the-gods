@@ -16,4 +16,5 @@ MonoBehaviour:
   rarity: 2
   interactable: 1
   sprite: {fileID: -1552180663807121169, guid: 57e8c1c5a9db983458a7e91325d3a411, type: 3}
-  rottenSprite: {fileID: 0}
+  rottenSprite: {fileID: 6049452156923639266, guid: 57e8c1c5a9db983458a7e91325d3a411,
+    type: 3}

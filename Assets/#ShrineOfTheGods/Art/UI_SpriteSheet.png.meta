@@ -8,6 +8,42 @@ TextureImporter:
   - first:
       213: -4640330509532052334
     second: Icon_Sun
+  - first:
+      213: -8578271370445343074
+    second: UI_XBOX_A
+  - first:
+      213: 2023271933542497938
+    second: UI_XBOX_X
+  - first:
+      213: -6031442867046419024
+    second: UI_XBOX_B
+  - first:
+      213: 4050377478568521116
+    second: UI_XBOX_Y
+  - first:
+      213: 86950127826546775
+    second: UI_Keyboard_E
+  - first:
+      213: -49688392737679028
+    second: UI_Keyboard_Q
+  - first:
+      213: 8305345774195920952
+    second: UI_Keyboard_R
+  - first:
+      213: 2905905011506562312
+    second: UI_Heart
+  - first:
+      213: -7348596064645043917
+    second: UI_Meter_Empty
+  - first:
+      213: 5472218031393722235
+    second: UI_Button
+  - first:
+      213: 882115495372157852
+    second: UI_HintText
+  - first:
+      213: -6313002280704479065
+    second: UI_MeterFull
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -121,7 +157,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 60
-        y: 4
+        y: 47
         width: 65
         height: 29
       alignment: 7
@@ -142,7 +178,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 103
-        y: 70
+        y: 113
         width: 22
         height: 22
       alignment: 0
@@ -154,6 +190,258 @@ TextureImporter:
       bones: []
       spriteID: 2944fe2bcfb3a9fb0800000000000000
       internalID: -4640330509532052334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_XBOX_A
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 126
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e96b3b163abd3f880800000000000000
+      internalID: -8578271370445343074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_XBOX_X
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 126
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29e71d29a1b141c10800000000000000
+      internalID: 2023271933542497938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_XBOX_B
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 126
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b572aa1ba20c4ca0800000000000000
+      internalID: -6031442867046419024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_XBOX_Y
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 126
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9da1506bd4d53830800000000000000
+      internalID: 4050377478568521116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Keyboard_E
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 115
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 750b64a3ea8e43100800000000000000
+      internalID: 86950127826546775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Keyboard_Q
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 115
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4919698ba87f4ff0800000000000000
+      internalID: -49688392737679028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Keyboard_R
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 115
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8305dbf5af3824370800000000000000
+      internalID: 8305345774195920952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Heart
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 98
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80540e93639d35820800000000000000
+      internalID: 2905905011506562312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Meter_Empty
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 100
+        width: 20
+        height: 5
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 339aff050da840a90800000000000000
+      internalID: -7348596064645043917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Button
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 80
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7fc5b67e4931fb40800000000000000
+      internalID: 5472218031393722235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_HintText
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 11
+        width: 128
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9376809e57ed3c00800000000000000
+      internalID: 882115495372157852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_MeterFull
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 101
+        width: 18
+        height: 3
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a0f0689fd5b368a0800000000000000
+      internalID: -6313002280704479065
       vertices: []
       indices: 
       edges: []
