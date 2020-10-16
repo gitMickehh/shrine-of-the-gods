@@ -4,15 +4,31 @@ using UnityEngine;
 
 public class Animal : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public S_Animal animalTemplate;
+    public SpriteRenderer animalRendedrer;
+    public Collectable myCollectable;
+    private bool interactable;
+
+    [ContextMenu("Refine Look")]
+    public void RefineLook()
     {
-        
+        transform.name = animalTemplate.name;
+        animalRendedrer.sprite = animalTemplate.sprite;
+        interactable = animalTemplate.interactable;
+
+        if (interactable)
+            myCollectable.myElement = animalTemplate;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void InitAnimal(S_Animal anim)
     {
-        
+        transform.name = anim.name;
+
+        animalTemplate = anim;
+        animalRendedrer.sprite = animalTemplate.sprite;
+        interactable = animalTemplate.interactable;
+
+        if (interactable)
+            myCollectable.myElement = animalTemplate;
     }
 }

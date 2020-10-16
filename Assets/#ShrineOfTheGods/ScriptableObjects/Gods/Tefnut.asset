@@ -29,4 +29,6 @@ MonoBehaviour:
     burnedBonus: 0
   - itemSacrificed: {fileID: 11400000, guid: ce5db2d6bb27a25489fe01e5a954a498, type: 2}
     burnedBonus: 0
-  weakeningItems: []
+  weakeningItems:
+  - itemSacrificed: {fileID: 11400000, guid: 8b8dcd5a3980dc04c89549cbad33e6dc, type: 2}
+    burnedBonus: 1
