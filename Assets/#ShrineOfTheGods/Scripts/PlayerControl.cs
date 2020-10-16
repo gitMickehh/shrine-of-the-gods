@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class PlayerControl : MonoBehaviour
@@ -26,6 +27,8 @@ public class PlayerControl : MonoBehaviour
     [Header("Animation")]
     public Animator myAnimator;
 
+    [Header("Eating")]
+    public UnityEvent OnEat;
 
     private void Awake()
     {
@@ -73,6 +76,19 @@ public class PlayerControl : MonoBehaviour
         if (Input.GetButtonDown("Interact"))
         {
             Interact();
+        }
+        else if(Input.GetButtonDown("Eat"))
+        {
+            if(myInventory.Value != null)
+            {
+                OnEat.Invoke();
+                myInventory.Value.EatItem();
+            }
+        }
+        else if (Input.GetButtonDown("Drop"))
+        {
+            if(myInventory.Value != null)
+                myInventory.Value.DropItem();
         }
     }
 

@@ -3,21 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-[System.Serializable] 
-public class SpawnPoint {
-    public Transform spawnPos;
-    public bool occupied;
-
-    public void Occupy(bool toggle)
-    {
-        occupied = toggle;
-    }
-}
-
 public class WorldGenerator : MonoBehaviour
 {
     [Header("Gods")]
-    public List<S_God> gods;
+    public S_GodsList gods;
+    private List<S_God> godsPrivate;
 
     [Header("Land  Types")]
     public List<S_LandType> landTypes;
@@ -45,19 +35,15 @@ public class WorldGenerator : MonoBehaviour
     public void GenerateWorld()
     {
         //in the beginning was the word (John 1)
-        ClearGodPowers();
+        gods.ClearPowers();
+
+        godsPrivate = gods.items.ToList();
         lands = new List<PieceOfLand>();
+
         CalculateMiddle();
         GenerateLands();
     }
 
-    private void ClearGodPowers()
-    {
-        foreach (S_God god in gods)
-        {
-            god.currentPower.Value = 0;
-        }
-    }
 
     private List<S_LandType> GetLandsBasedOnRarity()
     {
@@ -131,7 +117,7 @@ public class WorldGenerator : MonoBehaviour
 
         for (int i = rStart + 1; i < lands.Count; i++)
         {
-            if (gods.Count <= 0)
+            if (godsPrivate.Count <= 0)
                 return;
 
             if (shrineDistance >= maxShrineDistance)
@@ -159,9 +145,9 @@ public class WorldGenerator : MonoBehaviour
 
     private void PlaceRandomShrine(int landIndex)
     {
-        int randomGodIndex = Random.Range(0, gods.Count);
-        lands[landIndex].AddObjectRandomly(SpawnShrine(gods[randomGodIndex]));
-        gods.RemoveAt(randomGodIndex);
+        int randomGodIndex = Random.Range(0, godsPrivate.Count);
+        lands[landIndex].AddObjectRandomly(SpawnShrine(godsPrivate[randomGodIndex]));
+        godsPrivate.RemoveAt(randomGodIndex);
     }
 
     private void GenerateLandsItems()

@@ -11,10 +11,13 @@ public class Fire : MonoBehaviour
     public GameObject particleEffect;
 
     private int firePower;
+    private SpawnPoint mySpawnPoint;
+    private bool fireAlive;
 
-    public void SetupFire(S_Fire template)
+    public void SetupFire(S_Fire template, SpawnPoint spawnPoint = null)
     {
         fireTemplate = template;
+        mySpawnPoint = spawnPoint;
         ReKindleFire();
     }
 
@@ -35,13 +38,33 @@ public class Fire : MonoBehaviour
         }
     }
 
+    public bool IsAlive()
+    {
+        return fireAlive;
+    }
+
+    public void KillFireImmediatly(int fireLevel)
+    {
+        if (fireLevel >= firePower)
+            KillFire();
+    }
+
     public void KillFire()
     {
+        fireAlive = false;
+        fireRenderer.sprite = null;
         particleEffect.SetActive(false);
+    }
+
+    public void PowerupFire(S_Fire newTemplate)
+    {
+        fireTemplate = newTemplate;
+        ReKindleFire();
     }
 
     public void ReKindleFire()
     {
+        fireAlive = true;
         firePower = fireTemplate.firePower;
         fireRenderer.sprite = fireTemplate.fireSprite;
 

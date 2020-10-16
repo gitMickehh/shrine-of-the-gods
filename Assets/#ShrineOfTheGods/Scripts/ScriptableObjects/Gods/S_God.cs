@@ -26,6 +26,11 @@ public class S_God : ScriptableObject
     [Header("Stats")]
     public S_Int currentPower;
 
+    [Header("Events")]
+    public GameEvent godDefault;
+    public GameEvent godStrong;
+    public GameEvent godWeak;
+
     [Header("Sacrifice")]
     public List<SacrificeSetting> empoweringItems = new List<SacrificeSetting>();
     public List<SacrificeSetting> weakeningItems = new List<SacrificeSetting>();
@@ -55,4 +60,5 @@ public class S_God : ScriptableObject
         //not found
         return 0;
     }
+
 }

@@ -9,12 +9,12 @@ public class S_Fire : S_GenerationElement
     [Tooltip("The number of times to burn from this from before it runs out")]
     public int firePower = 2;
 
-    public override GameObject SpawnInWorld()
+    public override GameObject SpawnInWorld(SpawnPoint spawnPoint)
     {
         var fireObj = Instantiate(prefab, Vector3.zero, Quaternion.identity);
 
         var fir = fireObj.GetComponent<Fire>();
-        fir.SetupFire(this);
+        fir.SetupFire(this, spawnPoint);
 
         return fireObj;
     }

@@ -9,6 +9,7 @@ public class Vegetation : MonoBehaviour
     public SpriteRenderer plantRenderer;
     public Collectable myCollectable;
     private bool interactable;
+    private SpawnPoint myPoint;
 
     [ContextMenu("Refine Look")]
     public void RefineLook()
@@ -21,7 +22,7 @@ public class Vegetation : MonoBehaviour
             myCollectable.myElement = plantTemplate;
     }
 
-    public void SetVegetation(S_Vegetation veg)
+    public void SetVegetation(S_Vegetation veg, SpawnPoint spawnPoint = null)
     {
         transform.name = veg.name;
 
@@ -29,8 +30,15 @@ public class Vegetation : MonoBehaviour
         plantRenderer.sprite = plantTemplate.sprite;
         interactable = plantTemplate.interactable;
 
-        if(interactable)
+        myPoint = spawnPoint;
+
+        if (interactable)
             myCollectable.myElement = plantTemplate;
+    }
+
+    public void VegetationPicked()
+    {
+        myPoint.occupied = false;
     }
 
 }

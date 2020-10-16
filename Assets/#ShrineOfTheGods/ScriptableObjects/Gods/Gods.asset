@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1139396103082648826cf3be47499ed, type: 3}
+  m_Name: Gods
+  m_EditorClassIdentifier: 
+  items:
+  - {fileID: 11400000, guid: b3f43b6cdc611624490c877f82c1f071, type: 2}
+  - {fileID: 11400000, guid: c97e099541a4a8d48bac8818c53f8ec2, type: 2}
+  - {fileID: 11400000, guid: 996b43a07e75bdf4585af85bbd847a35, type: 2}
+  - {fileID: 11400000, guid: a663466ed3c985940a347ed766314682, type: 2}
+  PowerGap: 3
+  strongestGods: []
+  weakestGods: []

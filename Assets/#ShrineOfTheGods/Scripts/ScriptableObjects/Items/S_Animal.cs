@@ -9,12 +9,12 @@ public class S_Animal : S_GenerationElement
     public Sprite sprite;
     public bool interactable;
 
-    public override GameObject SpawnInWorld()
+    public override GameObject SpawnInWorld(SpawnPoint spawnPoint)
     {
         var animalObj = Instantiate(prefab, Vector3.zero, Quaternion.identity);
 
         var anim = animalObj.GetComponent<Animal>();
-        anim.InitAnimal(this);
+        anim.InitAnimal(this, spawnPoint);
 
         return animalObj;
     }

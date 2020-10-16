@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 
-public class Birds : MonoBehaviour
+public class ScaredBehaviour : MonoBehaviour
 {
     public Collider2D myCollider;
     public Rigidbody2D myRB;

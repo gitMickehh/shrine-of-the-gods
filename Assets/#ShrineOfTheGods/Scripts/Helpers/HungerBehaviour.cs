@@ -64,4 +64,9 @@ public class HungerBehaviour : MonoBehaviour
             onDeath.Invoke();
         }
     }
+
+    public void EatItem()
+    {
+        AddHunger(10);
+    }
 }

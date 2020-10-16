@@ -54,6 +54,11 @@ public class Collectable : MonoBehaviour
         rb.simulated = true;
     }
 
+    public void EatItem()
+    {
+        Destroy(gameObject);
+    }
+
     public void Burn(GameObject particleVFX)
     {
         if (burned)

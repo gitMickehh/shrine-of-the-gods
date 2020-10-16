@@ -15,6 +15,23 @@ public class DaySchedule : ScriptableObject
 
     public List<SOG_Day> schedule = new List<SOG_Day>();
 
+    public void RaiseDayEvents(int dayNumber)
+    {
+        SOG_Day day = schedule.Find(x => x.dayNumber == dayNumber);
+
+        if (day == null)
+            return;
+        else if (day.customEvents.Count == 0)
+            return;
+        else
+        {
+            foreach (GameEvent dayEvent in day.customEvents)
+            {
+                dayEvent.Raise();
+            }
+        }
+    }
+
     public string GetDayMessage(int dayNumber)
     {
         SOG_Day day = schedule.Find(x => x.dayNumber == dayNumber);

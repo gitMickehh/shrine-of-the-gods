@@ -35,8 +35,10 @@ public class PieceOfLand : MonoBehaviour
         while(HasAvailableSpawnPoint())
         {
             int r = Random.Range(0,templates.Count);
-            var elm = templates[r].SpawnInWorld();
-            AddObjectToSpawnPoint(NextSpawnPointIndex(), elm);
+            var spawnPoint = RandomSpawnPoint();
+
+            var elm = templates[r].SpawnInWorld(spawnPoint);
+            AddObjectToSpawnPoint(spawnPoint, elm);
         }
     }
 

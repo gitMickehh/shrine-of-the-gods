@@ -20,6 +20,9 @@ MonoBehaviour:
   shrineConversation: {fileID: 11400000, guid: a99089dfacc246d428c4b84d0206200f, type: 2}
   godConversation: {fileID: 11400000, guid: dbcab237d0f124b44bdbc46e36be94d2, type: 2}
   currentPower: {fileID: 11400000, guid: 4b6c4e4e4dce5ec4f8cebbe1d65b0966, type: 2}
+  godDefault: {fileID: 11400000, guid: 5ccfb351ec096de46989123e76a0e787, type: 2}
+  godStrong: {fileID: 11400000, guid: 2911f9ba2db15024db977cbc81daa3f5, type: 2}
+  godWeak: {fileID: 11400000, guid: f5128c310da0e7246a78838ceef748f9, type: 2}
   empoweringItems:
   - itemSacrificed: {fileID: 11400000, guid: 70df22be05a120e469e79ad14a6a97e8, type: 2}
     burnedBonus: 0

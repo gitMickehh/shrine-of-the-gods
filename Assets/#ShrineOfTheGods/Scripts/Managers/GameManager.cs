@@ -6,14 +6,17 @@ public class GameManager : MonoBehaviour
 {
     public DaySchedule clockworkSchedule;
 
+    [Header("Gods")]
+    public S_GodsList gods;
+
     [Header("References")]
     public S_Int dayNumber;
     public Transform playerTransform;
     public Transform playerStartPosition;
 
     [Header("Randomness")]
-    public bool useCustomSeed;
-    public int customSeed;
+    public S_Bool useCustomSeed;
+    public S_Int customSeed;
 
     [Header("Game Start")]
     public UI_DayAnnouncement startAnnouncement;
@@ -23,9 +26,9 @@ public class GameManager : MonoBehaviour
     {
         dayNumber.Value = clockworkSchedule.startDay;
 
-        if (useCustomSeed)
+        if (useCustomSeed.Value)
         {
-            Random.InitState(customSeed);
+            Random.InitState(customSeed.Value);
         }
 
         startAnnouncement.StartTransition(dayNumber.Value, clockworkSchedule.GetDayMessage(dayNumber.Value), clockworkSchedule.GetDaySprite(dayNumber.Value));
@@ -34,6 +37,10 @@ public class GameManager : MonoBehaviour
     public void StartDay()
     {
         playerTransform.position = playerStartPosition.position;
+
+        //call here the events of the day and everything
+        gods.ActivateGodEffects();
+        clockworkSchedule.RaiseDayEvents(dayNumber.Value);
     }
 
     public void DayEnd()
@@ -45,10 +52,7 @@ public class GameManager : MonoBehaviour
     public void NextDay()
     {
         dayNumber.Value++;
-
-        //call here the events of the day and everything
-        //events also that depend on which god is ahead
-
+        
         startAnnouncement.StartTransition(dayNumber.Value, clockworkSchedule.GetDayMessage(dayNumber.Value), clockworkSchedule.GetDaySprite(dayNumber.Value));
         resultScreen.HideResults();
         resultScreen.gameObject.SetActive(false);
