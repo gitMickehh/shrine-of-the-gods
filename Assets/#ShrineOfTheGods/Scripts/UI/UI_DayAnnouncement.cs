@@ -15,6 +15,9 @@ public class UI_DayAnnouncement : MonoBehaviour
     public TextMeshProUGUI dayMessageText;
     public Image UI_DayImage;
 
+    [Header("Header UI")]
+    public TextMeshProUGUI topDisplayDayText;
+
     [Header("Animation")]
     public float animationTime = 2f;
     public float holdTime = 1f;
@@ -31,7 +34,8 @@ public class UI_DayAnnouncement : MonoBehaviour
     void SetupScreen(int numberOfDay, string messageToSay, Sprite dayImage)
     {
         dayNumber = numberOfDay;
-        dayText.text = "Day " + numberOfDay;
+        dayText.text = "Day " + numberOfDay.ToString("00");
+        topDisplayDayText.text = dayText.text;
         dayMessageText.text = messageToSay;
 
         if (dayImage == null)

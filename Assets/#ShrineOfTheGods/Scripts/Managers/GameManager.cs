@@ -8,6 +8,8 @@ public class GameManager : MonoBehaviour
 
     [Header("References")]
     public S_Int dayNumber;
+    public Transform playerTransform;
+    public Transform playerStartPosition;
 
     [Header("Randomness")]
     public bool useCustomSeed;
@@ -29,6 +31,11 @@ public class GameManager : MonoBehaviour
         startAnnouncement.StartTransition(dayNumber.Value, clockworkSchedule.GetDayMessage(dayNumber.Value), clockworkSchedule.GetDaySprite(dayNumber.Value));
     }
 
+    public void StartDay()
+    {
+        playerTransform.position = playerStartPosition.position;
+    }
+
     public void DayEnd()
     {
         resultScreen.gameObject.SetActive(true);
@@ -43,6 +50,8 @@ public class GameManager : MonoBehaviour
         //events also that depend on which god is ahead
 
         startAnnouncement.StartTransition(dayNumber.Value, clockworkSchedule.GetDayMessage(dayNumber.Value), clockworkSchedule.GetDaySprite(dayNumber.Value));
+        resultScreen.HideResults();
+        resultScreen.gameObject.SetActive(false);
     }
 
 }
