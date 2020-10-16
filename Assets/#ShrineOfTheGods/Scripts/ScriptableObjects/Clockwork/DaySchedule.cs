@@ -42,7 +42,7 @@ public class DaySchedule : ScriptableObject
     [ContextMenu("Order List")]
     public void OrderSchedule()
     {
-        schedule.OrderBy(x=> x.dayNumber);
+        schedule = schedule.OrderBy(x=> x.dayNumber).ToList();
     }
 
 }

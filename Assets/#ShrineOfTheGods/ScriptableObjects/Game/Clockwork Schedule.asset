@@ -14,7 +14,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startDay: 1
   fallbackMessage: 'Survive. Serve all. Find balance. '
+  fallbackSprite: {fileID: 0}
   schedule:
-  - dayNumber: 2
-    name: Find balance.
-    customEvent: {fileID: 0}
+  - name: Find balance.
+    dayNumber: 2
+    customDayMultiplyer: 1
+    dayCustomSprite: {fileID: 0}
+    customEvents: []
+  - name: Frogs, they're so sluggish.
+    dayNumber: 4
+    customDayMultiplyer: 1
+    dayCustomSprite: {fileID: 0}
+    customEvents:
+    - {fileID: 11400000, guid: 9b88984cc3e8fc541883cc6118d27bf0, type: 2}
+  - name: Rain, it's hard to see and to burn.
+    dayNumber: 5
+    customDayMultiplyer: 1
+    dayCustomSprite: {fileID: 0}
+    customEvents:
+    - {fileID: 11400000, guid: 3f8af261e6708464da9c56f75d104f3e, type: 2}
