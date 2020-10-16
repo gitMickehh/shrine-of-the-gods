@@ -21,7 +21,7 @@ public class DayTimer : MonoBehaviour
 
     private void Start()
     {
-        EndTimer();
+        ResetValues();
     }
 
     public void StartTimer()
@@ -36,10 +36,15 @@ public class DayTimer : MonoBehaviour
         dayStart.Raise();
     }
 
-    private void EndTimer()
+    private void ResetValues()
     {
         currentTime.Value = 0;
         running = false;
+    }
+
+    private void EndTimer()
+    {
+        ResetValues();
 
         //fire an event so you can calculate the stuff and all
         dayEnd.Raise();

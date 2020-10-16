@@ -3,6 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 
+[System.Serializable]
+public class SacrificeSetting
+{
+    public S_GenerationElement itemSacrificed;
+    public bool burnedBonus;
+}
+
 [CreateAssetMenu(fileName = "New god", menuName = "Shrine Of The Gods/god")]
 public class S_God : ScriptableObject
 {
@@ -20,22 +27,28 @@ public class S_God : ScriptableObject
     public S_Int currentPower;
 
     [Header("Sacrifice")]
-    public List<S_GenerationElement> empoweringItems = new List<S_GenerationElement>();
-    public List<S_GenerationElement> weakeningItems = new List<S_GenerationElement>();
+    public List<SacrificeSetting> empoweringItems = new List<SacrificeSetting>();
+    public List<SacrificeSetting> weakeningItems = new List<SacrificeSetting>();
 
     public int GiveItem(Collectable item)
     {
-        S_GenerationElement found = empoweringItems.Find(x => x.name == item.myElement.name);
+        SacrificeSetting found = empoweringItems.Find(x => x.itemSacrificed.name == item.myElement.name);
         if (found != null)
         {
-            currentPower.Value++;
+            if (item.burned == found.burnedBonus)
+                currentPower.Value += 2;
+            else
+                currentPower.Value++;
             return 1;
         }
 
-        found = empoweringItems.Find(x => x.name == item.myElement.name);
+        found = empoweringItems.Find(x => x.itemSacrificed.name == item.myElement.name);
         if (found != null)
         {
-            currentPower.Value++;
+            if (item.burned == found.burnedBonus)
+                currentPower.Value -= 2;
+            else
+                currentPower.Value--;
             return -1;
         }
 

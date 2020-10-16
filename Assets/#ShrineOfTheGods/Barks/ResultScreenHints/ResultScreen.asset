@@ -10,15 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 107c97d0bb7d61640a26f2b47be744f8, type: 3}
-  m_Name: Ra_Shrine
+  m_Name: ResultScreen
   m_EditorClassIdentifier: 
   currentConversation: 0
   loopConverastion: 1
   inOrder: 0
-  CharacterName: Ra's Shrine
+  CharacterName: End of day hints
   conversations:
-  - name: Shrine
+  - name: Normal end of day hints
     sentences:
-    - I am the god of the sun.
-    - I shall light up your day.
-    - I shall give you warmth.
+    - Thoth doesn't like anything that's burning.
+    - Tefnut doesn't like sacrifices that feel pain.
+    - Try to keep the gods closer to each other in power level.
+    - Fires burn out after usage.

@@ -6,4 +6,9 @@ using UnityEngine;
 public class S_Inventory : S_RuntimeObject<Collectable>
 {
     public PlayerControl player;
+
+    public bool IsEmpty()
+    {
+        return (Value == null);
+    }
 }

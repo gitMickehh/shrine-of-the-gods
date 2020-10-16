@@ -33,7 +33,6 @@ public class WorldGenerator : MonoBehaviour
     public Vector2Int worldSize;
     private Vector2Int middleCell;
 
-
     //spawned objects
     private List<PieceOfLand> lands;
     private List<GodShrine> shrines;
@@ -46,9 +45,18 @@ public class WorldGenerator : MonoBehaviour
     public void GenerateWorld()
     {
         //in the beginning was the word (John 1)
+        ClearGodPowers();
         lands = new List<PieceOfLand>();
         CalculateMiddle();
         GenerateLands();
+    }
+
+    private void ClearGodPowers()
+    {
+        foreach (S_God god in gods)
+        {
+            god.currentPower.Value = 0;
+        }
     }
 
     private List<S_LandType> GetLandsBasedOnRarity()

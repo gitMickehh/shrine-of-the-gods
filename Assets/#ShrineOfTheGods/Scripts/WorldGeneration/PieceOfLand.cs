@@ -11,6 +11,9 @@ public class PieceOfLand : MonoBehaviour
 
     public List<SpawnPoint> spawnPositions;
     List<SpawnPoint> availableSpawnPositions;
+    
+    [Header("Extra SpawnPoints")]
+    public List<SpawnPoint> extraSpawnPoints;
 
     List<GameObject> spawnedObjects;
 
