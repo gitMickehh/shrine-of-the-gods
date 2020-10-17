@@ -11,7 +11,7 @@ public class S_Vegetation : S_GenerationElement
 
     public override GameObject SpawnInWorld(SpawnPoint spawnPoint)
     {
-        var vegObj = Instantiate(prefab, Vector3.zero, Quaternion.identity);
+        var vegObj = Instantiate(prefab, spawnPoint.spawnPos);
 
         var veg = vegObj.GetComponent<Vegetation>();
         veg.SetVegetation(this, spawnPoint);

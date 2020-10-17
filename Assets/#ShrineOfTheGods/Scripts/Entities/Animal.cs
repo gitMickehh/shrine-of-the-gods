@@ -9,6 +9,7 @@ public class Animal : MonoBehaviour
     public Collectable myCollectable;
     private bool interactable;
     private SpawnPoint mySpawnPoint;
+    public IdleSeeker seeker;
 
     [ContextMenu("Refine Look")]
     public void RefineLook()
@@ -33,6 +34,8 @@ public class Animal : MonoBehaviour
 
         if (interactable)
             myCollectable.myElement = animalTemplate;
+
+        seeker.StartSeeker();
     }
 
     public void AnimalLeft()

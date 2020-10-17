@@ -11,7 +11,7 @@ public class S_Fire : S_GenerationElement
 
     public override GameObject SpawnInWorld(SpawnPoint spawnPoint)
     {
-        var fireObj = Instantiate(prefab, Vector3.zero, Quaternion.identity);
+        var fireObj = Instantiate(prefab, spawnPoint.spawnPos);
 
         var fir = fireObj.GetComponent<Fire>();
         fir.SetupFire(this, spawnPoint);

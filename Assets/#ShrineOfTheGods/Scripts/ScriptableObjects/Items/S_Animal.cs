@@ -11,9 +11,9 @@ public class S_Animal : S_GenerationElement
 
     public override GameObject SpawnInWorld(SpawnPoint spawnPoint)
     {
-        var animalObj = Instantiate(prefab, Vector3.zero, Quaternion.identity);
+        var animalObj = Instantiate(prefab, spawnPoint.spawnPos);
 
-        var anim = animalObj.GetComponent<Animal>();
+        var anim = animalObj.GetComponentInChildren<Animal>();
         anim.InitAnimal(this, spawnPoint);
 
         return animalObj;

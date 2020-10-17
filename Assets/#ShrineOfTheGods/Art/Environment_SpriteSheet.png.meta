@@ -95,6 +95,12 @@ TextureImporter:
   - first:
       213: 1019985668626381410
     second: Veg_Eggplant
+  - first:
+      213: -8845305360632194340
+    second: Animal_Sheep
+  - first:
+      213: 7410307985640417116
+    second: Animal_Dog
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -548,7 +554,7 @@ TextureImporter:
         width: 9
         height: 9
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -569,7 +575,7 @@ TextureImporter:
         width: 9
         height: 9
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -590,7 +596,7 @@ TextureImporter:
         width: 9
         height: 9
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -829,6 +835,48 @@ TextureImporter:
       bones: []
       spriteID: 26af67ebf87b72e00800000000000000
       internalID: 1019985668626381410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Animal_Sheep
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 17
+        width: 23
+        height: 15
+      alignment: 9
+      pivot: {x: 0.5, y: 0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdad8a193a92f3580800000000000000
+      internalID: -8845305360632194340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Animal_Dog
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 19
+        width: 13
+        height: 11
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c576658f9d3b6d660800000000000000
+      internalID: 7410307985640417116
       vertices: []
       indices: 
       edges: []

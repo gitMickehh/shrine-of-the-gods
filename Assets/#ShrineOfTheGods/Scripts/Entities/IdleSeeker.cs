@@ -18,7 +18,9 @@ public class IdleSeeker : MonoBehaviour
 
     [Header("Seeking Settings")]
     public float timeToReachTarget = 3f;
+    public float maxTimeToReachTarget = 6f;
     public float stoppingTime = 2f;
+    public float maxStoppingTime = 3f;
 
     [Header("Targets")]
     // public List<targetSet> targetSets;
@@ -54,13 +56,14 @@ public class IdleSeeker : MonoBehaviour
     public void StartSeeker()
     {
         isIdle = true;
-        currentTarget = -1;
+        currentTarget = UnityEngine.Random.Range(0,targets.Count);
         MoveToNext();
     }
 
     private void SeekTarget(Vector3 targetPosition)
     {
-        moveTween = myBody.DOMove(targetPosition, timeToReachTarget).OnComplete(StandInStop);
+        float r = UnityEngine.Random.Range(timeToReachTarget,maxTimeToReachTarget);
+        moveTween = myBody.DOMove(targetPosition, r).OnComplete(StandInStop);
     }
 
     private void MoveToNext()
@@ -91,7 +94,8 @@ public class IdleSeeker : MonoBehaviour
 
     IEnumerator StandingInStop()
     {
-        yield return new WaitForSeconds(stoppingTime);
+        float r = UnityEngine.Random.Range(stoppingTime, maxStoppingTime);
+        yield return new WaitForSeconds(r);
         MoveToNext();
     }
 

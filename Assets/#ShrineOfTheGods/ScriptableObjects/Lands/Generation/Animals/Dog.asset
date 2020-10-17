@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8d7517e2c709ac14cbdc8ac35d088af3, type: 3}
-  m_Name: Sheep
+  m_Name: Dog
   m_EditorClassIdentifier: 
   prefab: {fileID: 1745939291145203985, guid: 565d3fe1f9db58544ad445c77c432aae, type: 3}
-  rarity: 3
-  sprite: {fileID: -8845305360632194340, guid: 57e8c1c5a9db983458a7e91325d3a411, type: 3}
+  rarity: 1
+  sprite: {fileID: 7410307985640417116, guid: 57e8c1c5a9db983458a7e91325d3a411, type: 3}
   interactable: 1
