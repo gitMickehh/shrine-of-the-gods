@@ -14,6 +14,11 @@ public class TargetFollower : MonoBehaviour
     public S_Vector2 playerDirection;
     public Vector2 threhsold;
 
+    [Header("Bounds")]
+    public bool haveBounds;
+    public Vector2 minBounds;
+    public Vector2 maxBounds;
+
 
     private void Start()
     {
@@ -23,9 +28,36 @@ public class TargetFollower : MonoBehaviour
         currentOffset = Offset;
     }
 
+    private Vector3 CheckBounds(Vector3 desiredPosition)
+    {
+        if (haveBounds)
+        {
+            if (desiredPosition.x <= minBounds.x)
+            {
+                desiredPosition.x = minBounds.x;
+            }
+            else if (desiredPosition.x >= maxBounds.x)
+            {
+                desiredPosition.x = maxBounds.x;
+            }
+
+            if (desiredPosition.y <= minBounds.y)
+            {
+                desiredPosition.y = minBounds.y;
+            }
+            else if (desiredPosition.y >= maxBounds.y)
+            {
+                desiredPosition.y = maxBounds.y;
+            }
+        }
+
+        return desiredPosition;
+    } 
+
     private Vector3 CalculateThreshold(Vector3 desiredPosition, Vector3 smoothPosition)
     {
         var difference = desiredPosition - smoothPosition;
+        
         if (Mathf.Abs(difference.x) <= threhsold.x)
         {
             smoothPosition.x = desiredPosition.x;
@@ -71,6 +103,7 @@ public class TargetFollower : MonoBehaviour
     private void FollowTarget()
     {
         Vector3 desiredPosition = target.position + currentOffset;
+        desiredPosition = CheckBounds(desiredPosition);
 
         Vector3 smoothPosition = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed * Time.deltaTime);
 
@@ -81,5 +114,23 @@ public class TargetFollower : MonoBehaviour
     public void MoveCameraToPlace()
     {
         transform.position = target.position + Offset;
+    }
+
+    public void OnDrawGizmosSelected()
+    {
+        //Draw bounds
+     
+        if(haveBounds)
+        {
+            Gizmos.color = Color.red;
+
+            var p1 = new Vector2(minBounds.x, maxBounds.y);
+            var p2 = new Vector2(maxBounds.x, minBounds.y);
+
+            Gizmos.DrawLine(minBounds, p1);
+            Gizmos.DrawLine(p1, maxBounds);
+            Gizmos.DrawLine(maxBounds, p2);
+            Gizmos.DrawLine(p2, minBounds);
+        }
     }
 }

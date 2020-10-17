@@ -173,7 +173,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 2078064321
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: -9005282114065277085, guid: 57e8c1c5a9db983458a7e91325d3a411,
     type: 3}
@@ -516,6 +516,8 @@ MonoBehaviour:
   Offset: {x: -0.5, y: 0, z: 0}
   playerDirection: {fileID: 11400000, guid: f5c6b74ce3c123e42a86a1bc8b35be53, type: 2}
   threhsold: {x: 0.05, y: 0.05}
+  minBounds: {x: -35, y: -25}
+  maxBounds: {x: 35, y: 25}
 --- !u!114 &6268696553915429694
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -532,7 +534,9 @@ MonoBehaviour:
   interruptable: 1
   loopPath: 1
   timeToReachTarget: 3
+  maxTimeToReachTarget: 6
   stoppingTime: 2
+  maxStoppingTime: 3
   targets:
   - {fileID: 1947613710166852674}
   - {fileID: 3813398373880755286}
