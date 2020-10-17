@@ -15,9 +15,6 @@ public class Talker : MonoBehaviour, IInteractable
     bool sentenceFinished;
     string currentSentence;
 
-    [Header("Changer")]
-    public ConversationChanger changer;
-
     [Header("Events")]
     public UnityEvent OnInteraction;
     public UnityEvent OnEndSentence;
@@ -50,18 +47,8 @@ public class Talker : MonoBehaviour, IInteractable
 
     public void Interact()
     {
-        CheckConversationChanged();
         Talk();
         OnInteraction.Invoke();
-    }
-
-    private void CheckConversationChanged()
-    {
-        if (changer != null)
-        {
-            changer.conversation = conversationPiece;
-            changer.CheckConversationForChange();
-        }
     }
 
     private void Talk()

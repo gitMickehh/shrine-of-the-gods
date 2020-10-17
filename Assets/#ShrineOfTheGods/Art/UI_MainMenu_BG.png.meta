@@ -1,16 +1,7 @@
 fileFormatVersion: 2
-guid: 2842084f3895f684e951dc8b77965b83
+guid: 84aecc586d52f39488c88b2394ee9d12
 TextureImporter:
-  internalIDToNameTable:
-  - first:
-      213: -3968182364789597635
-    second: Player_Idle
-  - first:
-      213: 4587666066383894207
-    second: Player_Pray
-  - first:
-      213: 6454227986848301601
-    second: NPC_Idle
+  internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -49,7 +40,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -118,70 +109,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: Player_Idle
-      rect:
-        serializedVersion: 2
-        x: 6
-        y: 29
-        width: 15
-        height: 29
-      alignment: 9
-      pivot: {x: 0.5, y: 0.07}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d3a1fbed92f2ee8c0800000000000000
-      internalID: -3968182364789597635
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Player_Pray
-      rect:
-        serializedVersion: 2
-        x: 27
-        y: 30
-        width: 16
-        height: 26
-      alignment: 9
-      pivot: {x: 0.5, y: 0.07}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fb6fcea1bf9aaaf30800000000000000
-      internalID: 4587666066383894207
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: NPC_Idle
-      rect:
-        serializedVersion: 2
-        x: 5
-        y: 63
-        width: 16
-        height: 29
-      alignment: 9
-      pivot: {x: 0.5, y: 0.07}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1224a777826029950800000000000000
-      internalID: 6454227986848301601
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []

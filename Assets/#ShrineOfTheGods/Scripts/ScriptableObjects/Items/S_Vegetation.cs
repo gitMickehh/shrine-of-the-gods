@@ -6,6 +6,7 @@ using UnityEngine;
 public class S_Vegetation : S_GenerationElement
 {
     public bool interactable;
+    public bool canRot = true;
     public Sprite sprite;
     public Sprite rottenSprite;
 

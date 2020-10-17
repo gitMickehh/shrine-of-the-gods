@@ -9,12 +9,15 @@ public class UI_HomeMenu : MonoBehaviour
     [Header("Transition")]
     public UI_Transition transition;
 
-    [Header("Delete Button")]
-    public Button deleteDataButton;
+    [Header("Random Seed")]
+    public GameObject randomSeedObject;
+    public S_Bool seedOption;
+    public S_Int randomSeed;
+    public TMP_InputField randomSeedInputField;
 
     [Header("Audio")]
-    public TextMeshProUGUI audioText;
     public S_Bool audioOptions;
+    public Toggle audioOptionToggle;
 
     [Header("URLS!")]
     public string URL_MoreGames;
@@ -23,51 +26,78 @@ public class UI_HomeMenu : MonoBehaviour
 
     private void Start()
     {
+        CheckAudio();
+        CheckSeed();
+    }
+
+    private void CheckAudio()
+    {
         if (PlayerPrefs.HasKey("Audio"))
         {
             int savedAudioOption = PlayerPrefs.GetInt("Audio");
-            if(savedAudioOption == 1)
+            if (savedAudioOption == 1)
             {
                 audioOptions.Value = true;
-                audioText.text = "Audio On";
             }
             else
             {
                 audioOptions.Value = false;
-                audioText.text = "Audio Off";
             }
         }
         else
         {
             audioOptions.Value = true;
-            audioText.text = "Audio On";
         }
 
+        audioOptionToggle.isOn = audioOptions.Value;
 
-        deleteDataButton.interactable = PlayerPrefs.HasKey("loops");
+    }
+
+    private void CheckSeed()
+    {
+        if (PlayerPrefs.HasKey("Played"))
+        {
+            randomSeedObject.SetActive(true);
+        }
+        else
+        {
+            randomSeedObject.SetActive(false);
+        }
+
     }
 
     public void PlayButton()
     {
+        PlayerPrefs.SetInt("Played", 0);
         transition.LoadScene(1);
     }
 
-    public void ToggleAudio()
+    public void ToggleAudio(bool isOn)
     {
+        audioOptions.Value = isOn;
+
         if (audioOptions.Value)
         {
-            audioOptions.Value = false;
-            audioText.text = "Audio Off";
-
-            PlayerPrefs.SetInt("Audio",0);
+            PlayerPrefs.SetInt("Audio", 1);
         }
         else
         {
-            audioOptions.Value = true;
-            audioText.text = "Audio On";
-            
-            PlayerPrefs.SetInt("Audio",1);
+            PlayerPrefs.SetInt("Audio", 0);
         }
+    }
+
+    public void ToggleRandomSeed(bool isOn)
+    {
+        seedOption.Value = isOn;
+
+
+        randomSeedInputField.interactable = isOn;
+        randomSeedInputField.text = "";
+    }
+
+    public void ModifyRandomSeed(string seedString)
+    {
+        randomSeed.Value = int.Parse(seedString);
     }
 
     public void MoreGames()
