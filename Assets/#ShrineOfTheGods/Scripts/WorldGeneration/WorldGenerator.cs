@@ -28,11 +28,14 @@ public class WorldGenerator : MonoBehaviour
     private List<GameObject> allRainVFX;
     [Space]
     public GameObject scripturePrefab;
+    [Space]
+    public GameObject MummyPrefab;
 
     //spawned objects
     private List<PieceOfLand> lands;
     private List<GodShrine> shrines;
     private List<GameObject> thothScrpitures;
+    private List<Mummy> mummiesSpawned;
 
     private void Start()
     {
@@ -231,6 +234,38 @@ public class WorldGenerator : MonoBehaviour
         }
     }
 
+    public void SpawnMummies(int numberOfMummies)
+    {
+        if(mummiesSpawned==null)
+        {
+            mummiesSpawned = new List<Mummy>();
+
+            for (int i = 0; i < numberOfMummies; i++)
+            {
+                int r = Random.Range(0,lands.Count);
+                var mummyPos = lands[r].GetAnyPosition();
+                var mummy = Instantiate(MummyPrefab,mummyPos,Quaternion.identity);
+                mummy.transform.SetParent(transform);
+
+                mummiesSpawned.Add(mummy.GetComponent<Mummy>());
+            }
+        }
+    }
+
+    public void KillAllMummies()
+    {
+        if(mummiesSpawned != null)
+        {
+            foreach (Mummy mummy in mummiesSpawned)
+            {
+                mummy.KillMummy();
+            }
+
+            mummiesSpawned.Clear();
+            mummiesSpawned = null;
+        }
+    }
+
     private GameObject SpawnExtra(GameObject spawnPrefab)
     {
         int randomLand = Random.Range(0,lands.Count);
@@ -276,7 +311,7 @@ public class WorldGenerator : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        Gizmos.color = Color.green;
+        Gizmos.color = Color.black;
         CalculateMiddle();
 
         for (int i = 0; i < worldSize.x; i++)

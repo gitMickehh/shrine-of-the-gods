@@ -79,6 +79,23 @@ public class PieceOfLand : MonoBehaviour
         return true;
     }
 
+    public Vector3 GetAnyPosition()
+    {
+        int r = Random.Range(0, 2);
+        int randomPoint;
+
+        if(r == 0)
+        {
+            randomPoint = Random.Range(0, spawnPositions.Count);
+            return spawnPositions[randomPoint].spawnPos.position;
+        }
+        else
+        {
+            randomPoint = Random.Range(0, extraSpawnPoints.Count);
+            return extraSpawnPoints[randomPoint].spawnPos.position;
+        }
+    }
+
     public bool HasAvailableSpawnPoint()
     {
         availableSpawnPositions = spawnPositions.FindAll(x => !x.occupied).ToList();

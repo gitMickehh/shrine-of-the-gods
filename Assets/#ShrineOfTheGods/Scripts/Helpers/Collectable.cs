@@ -36,7 +36,7 @@ public class Collectable : MonoBehaviour
         follower.enabled = true;
         follower.StartFollowing(playerInventory.player.transform);
 
-        rb.simulated = false;
+        rb.simulated = true;
 
         OnCollect.Invoke();
     }
@@ -47,6 +47,7 @@ public class Collectable : MonoBehaviour
         collected = false;
         follower.StopFollowing();
         follower.enabled = false;
+        rb.simulated = false;
 
         OnSacrafice.Invoke();
     }
