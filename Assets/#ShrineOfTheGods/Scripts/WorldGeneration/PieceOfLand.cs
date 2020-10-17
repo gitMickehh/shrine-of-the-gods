@@ -42,6 +42,31 @@ public class PieceOfLand : MonoBehaviour
         }
     }
 
+    public bool HasExtraSpace()
+    {
+        for (int i = 0; i < extraSpawnPoints.Count; i++)
+        {
+            if (!extraSpawnPoints[i].occupied)
+                return true;
+        }
+
+        return false;
+    }
+
+    public GameObject SpawnExtra(GameObject prefab)
+    {
+        for (int i = 0; i < extraSpawnPoints.Count; i++)
+        {
+            if (!extraSpawnPoints[i].occupied)
+            {
+                var obj = Instantiate(prefab,spawnPositions[i].spawnPos);
+                return obj;
+            }
+        }
+
+        return null;
+    }
+
     public bool AddObjectRandomly(GameObject obj)
     {
         if(!HasAvailableSpawnPoint())

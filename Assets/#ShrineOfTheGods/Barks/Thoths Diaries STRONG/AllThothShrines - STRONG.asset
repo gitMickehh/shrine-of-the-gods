@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 717f0259f0f90b545bfba949784c7251, type: 3}
+  m_Name: AllThothShrines - STRONG
+  m_EditorClassIdentifier: 
+  items:
+  - {fileID: 11400000, guid: 34d921026682d034d9a167cb01c80e23, type: 2}
+  - {fileID: 11400000, guid: f53acea002579944caa4b563568ab6df, type: 2}
+  - {fileID: 11400000, guid: 64761d5242b69c5409c1fb5cec361d62, type: 2}
+  current: 0

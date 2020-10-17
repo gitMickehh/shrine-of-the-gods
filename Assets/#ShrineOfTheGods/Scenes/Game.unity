@@ -233,6 +233,8 @@ GameObject:
   - component: {fileID: 69769569}
   - component: {fileID: 69769571}
   - component: {fileID: 69769570}
+  - component: {fileID: 69769573}
+  - component: {fileID: 69769572}
   m_Layer: 0
   m_Name: WorldGenerator
   m_TagString: Untagged
@@ -281,6 +283,8 @@ MonoBehaviour:
   cellSize: {x: 14, y: 10}
   worldSize: {x: 5, y: 5}
   rain_VFX_Prefab: {fileID: 5479861682177625491, guid: 8165626ed21b8f0469dd90098e481b82,
+    type: 3}
+  scripturePrefab: {fileID: 3139478334128423737, guid: e3c4cac8af6c6fe43b32b2d5a357f7b1,
     type: 3}
 --- !u!114 &69769569
 MonoBehaviour:
@@ -362,6 +366,62 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 1
+        m_CallState: 2
+--- !u!114 &69769572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 69769566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49071e17f5c33be4fa9171c1bee0a4cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 109fc4ef1bf401b4abd97df8bc5530ce, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 69769568}
+        m_MethodName: SpawnOrModifyThothScriptures
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 73d091e2e03e26c4d903ca8efcb1c915,
+            type: 2}
+          m_ObjectArgumentAssemblyTypeName: S_ConversationsList, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &69769573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 69769566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49071e17f5c33be4fa9171c1bee0a4cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 3251f69886462c64f9951f96508ab38d, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 69769568}
+        m_MethodName: SpawnOrModifyThothScriptures
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 3b818e5cb89e16e46ba743a75ac3f01a,
+            type: 2}
+          m_ObjectArgumentAssemblyTypeName: S_ConversationsList, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
         m_CallState: 2
 --- !u!1 &115272000
 GameObject:

@@ -23,4 +23,17 @@ public abstract class S_AbstractList<T> : ScriptableObject
             items.Remove(item);
     }
 
+    public T GetRandom()
+    {
+        if (items.Count == 0)
+            return default(T);
+        else if (items.Count == 1)
+            return items[0];
+        else
+        {
+            int r = Random.Range(0, items.Count);
+            return items[r];
+        }
+    }
+
 }

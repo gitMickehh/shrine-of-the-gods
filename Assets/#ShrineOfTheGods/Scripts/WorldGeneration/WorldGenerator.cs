@@ -26,10 +26,13 @@ public class WorldGenerator : MonoBehaviour
     [Header("Effects In World")]
     public GameObject rain_VFX_Prefab;
     private List<GameObject> allRainVFX;
+    [Space]
+    public GameObject scripturePrefab;
 
     //spawned objects
     private List<PieceOfLand> lands;
     private List<GodShrine> shrines;
+    private List<GameObject> thothScrpitures;
 
     private void Start()
     {
@@ -226,6 +229,49 @@ public class WorldGenerator : MonoBehaviour
                 }
             }
         }
+    }
+
+    private GameObject SpawnExtra(GameObject spawnPrefab)
+    {
+        int randomLand = Random.Range(0,lands.Count);
+
+        var obj = lands[randomLand].SpawnExtra(spawnPrefab);
+
+        return obj;
+    }
+
+    public void SpawnOrModifyThothScriptures(S_ConversationsList shrineLines)
+    {
+        if(thothScrpitures == null)
+        {
+            thothScrpitures = SpawnThothShrines(shrineLines.items.Count);
+        }
+        else if(thothScrpitures.Count < shrineLines.items.Count)
+        {
+            foreach (GameObject oldShrine in thothScrpitures)
+            {
+                Destroy(oldShrine);
+            }
+
+            thothScrpitures = SpawnThothShrines(shrineLines.items.Count);
+        }
+
+        for (int i = 0; i < shrineLines.items.Count; i++)
+        {
+            thothScrpitures[i].GetComponent<Talker>().conversationPiece = shrineLines.items[i];
+        }
+    }
+
+    private List<GameObject> SpawnThothShrines(int numberOfShrines)
+    {
+        List<GameObject> scriptureSpawned = new List<GameObject>();
+
+        for (int i = 0; i < numberOfShrines; i++)
+        {
+            scriptureSpawned.Add(SpawnExtra(scripturePrefab));
+        }
+
+        return scriptureSpawned;
     }
 
     private void OnDrawGizmos()
