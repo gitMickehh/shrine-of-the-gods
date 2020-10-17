@@ -59,7 +59,7 @@ public class PieceOfLand : MonoBehaviour
         {
             if (!extraSpawnPoints[i].occupied)
             {
-                var obj = Instantiate(prefab,spawnPositions[i].spawnPos);
+                var obj = Instantiate(prefab,extraSpawnPoints[i].spawnPos);
                 return obj;
             }
         }
