@@ -30,34 +30,31 @@ public class TargetFollower : MonoBehaviour
 
     private Vector3 CheckBounds(Vector3 desiredPosition)
     {
-        if (haveBounds)
+        if (desiredPosition.x <= minBounds.x)
         {
-            if (desiredPosition.x <= minBounds.x)
-            {
-                desiredPosition.x = minBounds.x;
-            }
-            else if (desiredPosition.x >= maxBounds.x)
-            {
-                desiredPosition.x = maxBounds.x;
-            }
+            desiredPosition.x = minBounds.x;
+        }
+        else if (desiredPosition.x >= maxBounds.x)
+        {
+            desiredPosition.x = maxBounds.x;
+        }
 
-            if (desiredPosition.y <= minBounds.y)
-            {
-                desiredPosition.y = minBounds.y;
-            }
-            else if (desiredPosition.y >= maxBounds.y)
-            {
-                desiredPosition.y = maxBounds.y;
-            }
+        if (desiredPosition.y <= minBounds.y)
+        {
+            desiredPosition.y = minBounds.y;
+        }
+        else if (desiredPosition.y >= maxBounds.y)
+        {
+            desiredPosition.y = maxBounds.y;
         }
 
         return desiredPosition;
-    } 
+    }
 
     private Vector3 CalculateThreshold(Vector3 desiredPosition, Vector3 smoothPosition)
     {
         var difference = desiredPosition - smoothPosition;
-        
+
         if (Mathf.Abs(difference.x) <= threhsold.x)
         {
             smoothPosition.x = desiredPosition.x;
@@ -85,7 +82,7 @@ public class TargetFollower : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if(active)
+        if (active)
             FollowTarget();
     }
 
@@ -103,7 +100,9 @@ public class TargetFollower : MonoBehaviour
     private void FollowTarget()
     {
         Vector3 desiredPosition = target.position + currentOffset;
-        desiredPosition = CheckBounds(desiredPosition);
+
+        if (haveBounds)
+            desiredPosition = CheckBounds(desiredPosition);
 
         Vector3 smoothPosition = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed * Time.deltaTime);
 
@@ -119,8 +118,8 @@ public class TargetFollower : MonoBehaviour
     public void OnDrawGizmosSelected()
     {
         //Draw bounds
-     
-        if(haveBounds)
+
+        if (haveBounds)
         {
             Gizmos.color = Color.red;
 
