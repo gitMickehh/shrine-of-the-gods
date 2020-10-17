@@ -15,9 +15,16 @@ public class Collectable : MonoBehaviour
     public UnityEvent OnCollect;
     public UnityEvent OnSacrafice;
     public UnityEvent OnBurn;
+    public UnityEvent OnRot;
 
+    [Header("FIRE")]
     private GameObject fireObject;
     [HideInInspector] public bool burned;
+
+    [Header("ROT")]
+    public GameObject rotVFX;
+    private GameObject rotObject;
+    [HideInInspector] public bool rotten;
 
     public void CollectItem()
     {
@@ -59,13 +66,45 @@ public class Collectable : MonoBehaviour
         Destroy(gameObject);
     }
 
-    public void Burn(GameObject particleVFX)
+    public bool Burn(GameObject particleVFX)
     {
         if (burned)
-            return;
+            return false;
 
         OnBurn.Invoke();
         burned = true;
         fireObject = Instantiate(particleVFX, transform);
+        return true;
     }
+
+    public bool Rot(GameObject particleVFX)
+    {
+            if (rotten)
+                return false;
+
+            OnRot.Invoke();
+            rotten = true;
+            rotObject = Instantiate(particleVFX, transform);
+            return true;
+    }
+
+    public void Rot()
+    {
+            if (rotten)
+                return;
+
+            OnRot.Invoke();
+            rotten = true;
+            rotObject = Instantiate(rotVFX, transform);
+    }
+
+    public void StopRot()
+    {
+            if (!rotten)
+                return;
+
+            rotten = false;
+            Destroy(rotObject);
+    }
+
 }

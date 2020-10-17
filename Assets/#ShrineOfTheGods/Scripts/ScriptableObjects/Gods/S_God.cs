@@ -8,6 +8,7 @@ public class SacrificeSetting
 {
     public S_GenerationElement itemSacrificed;
     public bool burnedBonus;
+    public bool rottenBonus;
 }
 
 [CreateAssetMenu(fileName = "New god", menuName = "Shrine Of The Gods/god")]
@@ -44,6 +45,12 @@ public class S_God : ScriptableObject
                 currentPower.Value += 2;
             else
                 currentPower.Value++;
+
+            if (item.rotten == found.rottenBonus)
+                currentPower.Value += 2;
+            else
+                currentPower.Value++;
+            
             return 1;
         }
 
@@ -54,6 +61,12 @@ public class S_God : ScriptableObject
                 currentPower.Value -= 2;
             else
                 currentPower.Value--;
+
+            if (item.rotten == found.rottenBonus)
+                currentPower.Value -= 2;
+            else
+                currentPower.Value--;
+            
             return -1;
         }
 

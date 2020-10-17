@@ -26,10 +26,20 @@ MonoBehaviour:
   empoweringItems:
   - itemSacrificed: {fileID: 11400000, guid: 70df22be05a120e469e79ad14a6a97e8, type: 2}
     burnedBonus: 0
-  - itemSacrificed: {fileID: 11400000, guid: ce5db2d6bb27a25489fe01e5a954a498, type: 2}
-    burnedBonus: 0
+    rottenBonus: 0
+  - itemSacrificed: {fileID: 11400000, guid: 8b8dcd5a3980dc04c89549cbad33e6dc, type: 2}
+    burnedBonus: 1
+    rottenBonus: 0
+  - itemSacrificed: {fileID: 11400000, guid: 0e683a57769665e4484e5a1445592ce7, type: 2}
+    burnedBonus: 1
+    rottenBonus: 0
   weakeningItems:
   - itemSacrificed: {fileID: 11400000, guid: 11c32b612d059c1409e234f948678f57, type: 2}
     burnedBonus: 0
-  - itemSacrificed: {fileID: 11400000, guid: 0e683a57769665e4484e5a1445592ce7, type: 2}
-    burnedBonus: 0
+    rottenBonus: 1
+  - itemSacrificed: {fileID: 11400000, guid: 58ee9741eb390b34696f5c858b3f426b, type: 2}
+    burnedBonus: 1
+    rottenBonus: 1
+  - itemSacrificed: {fileID: 11400000, guid: ce5db2d6bb27a25489fe01e5a954a498, type: 2}
+    burnedBonus: 1
+    rottenBonus: 1

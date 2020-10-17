@@ -97,6 +97,8 @@ GameObject:
   - component: {fileID: 556393178842491033}
   - component: {fileID: 7050972918107182426}
   - component: {fileID: 8818801911948035800}
+  - component: {fileID: 5073406517941665426}
+  - component: {fileID: 1331497724061480996}
   m_Layer: 8
   m_Name: Vegetation
   m_TagString: Untagged
@@ -235,7 +237,12 @@ MonoBehaviour:
   OnBurn:
     m_PersistentCalls:
       m_Calls: []
+  OnRot:
+    m_PersistentCalls:
+      m_Calls: []
   burned: 0
+  rotVFX: {fileID: 5920829730237030326, guid: 0c355ea3cf7d2bc40b58372562045cba, type: 3}
+  rotten: 0
 --- !u!114 &8818801911948035800
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -254,6 +261,63 @@ MonoBehaviour:
   Offset: {x: -0.5, y: 0, z: 0}
   playerDirection: {fileID: 11400000, guid: f5c6b74ce3c123e42a86a1bc8b35be53, type: 2}
   threhsold: {x: 0.05, y: 0.05}
+  haveBounds: 0
+  minBounds: {x: 0, y: 0}
+  maxBounds: {x: 0, y: 0}
+--- !u!114 &5073406517941665426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1745939291145203985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49071e17f5c33be4fa9171c1bee0a4cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 948fe2276f85bcb4e8e28570b0aa6e60, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7050972918107182426}
+        m_MethodName: Rot
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1331497724061480996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1745939291145203985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49071e17f5c33be4fa9171c1bee0a4cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 218452dbc4c67e64bb79ca531443c30c, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7050972918107182426}
+        m_MethodName: StopRot
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &3563359746850101516
 GameObject:
   m_ObjectHideFlags: 0
@@ -322,7 +386,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 2078064321
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: -9005282114065277085, guid: 57e8c1c5a9db983458a7e91325d3a411,
     type: 3}

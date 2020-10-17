@@ -347,6 +347,8 @@ GameObject:
   - component: {fileID: 1065951114962937619}
   - component: {fileID: 4599085776238819973}
   - component: {fileID: 6268696553915429694}
+  - component: {fileID: 4785981621692571106}
+  - component: {fileID: 8700586877627124763}
   m_Layer: 8
   m_Name: Animal
   m_TagString: Untagged
@@ -497,7 +499,12 @@ MonoBehaviour:
   OnBurn:
     m_PersistentCalls:
       m_Calls: []
+  OnRot:
+    m_PersistentCalls:
+      m_Calls: []
   burned: 0
+  rotVFX: {fileID: 5920829730237030326, guid: 0c355ea3cf7d2bc40b58372562045cba, type: 3}
+  rotten: 0
 --- !u!114 &4599085776238819973
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -516,6 +523,7 @@ MonoBehaviour:
   Offset: {x: -0.5, y: 0, z: 0}
   playerDirection: {fileID: 11400000, guid: f5c6b74ce3c123e42a86a1bc8b35be53, type: 2}
   threhsold: {x: 0.05, y: 0.05}
+  haveBounds: 0
   minBounds: {x: -35, y: -25}
   maxBounds: {x: 35, y: 25}
 --- !u!114 &6268696553915429694
@@ -540,3 +548,57 @@ MonoBehaviour:
   targets:
   - {fileID: 1947613710166852674}
   - {fileID: 3813398373880755286}
+--- !u!114 &4785981621692571106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8836316901867630047}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49071e17f5c33be4fa9171c1bee0a4cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: e81762e95ac6af841aeda797b1daa4f7, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1065951114962937619}
+        m_MethodName: Rot
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &8700586877627124763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8836316901867630047}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49071e17f5c33be4fa9171c1bee0a4cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: a4be0bc4239d4844dac9a6ffd957d53b, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1065951114962937619}
+        m_MethodName: StopRot
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

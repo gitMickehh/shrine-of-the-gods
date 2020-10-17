@@ -11,6 +11,9 @@ TextureImporter:
   - first:
       213: 6454227986848301601
     second: NPC_Idle
+  - first:
+      213: -3674686839259255706
+    second: Mummy_Idle
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -178,6 +181,27 @@ TextureImporter:
       bones: []
       spriteID: 1224a777826029950800000000000000
       internalID: 6454227986848301601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mummy_Idle
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 63
+        width: 19
+        height: 29
+      alignment: 9
+      pivot: {x: 0.5, y: 0.07}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66c262df9c3e00dc0800000000000000
+      internalID: -3674686839259255706
       vertices: []
       indices: 
       edges: []

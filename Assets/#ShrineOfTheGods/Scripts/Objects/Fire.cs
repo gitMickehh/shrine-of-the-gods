@@ -32,8 +32,8 @@ public class Fire : MonoBehaviour
                 return;
             }
 
-            playerInventory.Value.Burn(particleEffect);
-            firePower--;
+            if (playerInventory.Value.Burn(particleEffect))
+                firePower--;
 
         }
     }
