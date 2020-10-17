@@ -5,7 +5,6 @@ using UnityEngine;
 [System.Serializable]
 public class SpawnPoint
 {
-
     public Transform spawnPos;
     public bool occupied;
     public S_GenerationElement template;
@@ -13,5 +12,10 @@ public class SpawnPoint
     public void Occupy(bool toggle)
     {
         occupied = toggle;
+    }
+
+    public GameObject GenerateNewObject()
+    {
+        return template.SpawnInWorld(this);
     }
 }

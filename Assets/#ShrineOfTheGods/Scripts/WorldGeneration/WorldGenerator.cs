@@ -172,6 +172,14 @@ public class WorldGenerator : MonoBehaviour
         return new Vector3((x - middleCell.x) * cellSize.x, (y - middleCell.y) * cellSize.y, 0);
     }
 
+    public void RegrowSpawnPoints()
+    {
+        foreach (PieceOfLand land in lands)
+        {
+            land.RegrowSpawnPoints();
+        }
+    }
+
     private void CalculateMiddle()
     {
         middleCell.x = Mathf.FloorToInt(worldSize.x / 2);

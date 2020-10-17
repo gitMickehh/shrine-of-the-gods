@@ -110,4 +110,13 @@ public class PieceOfLand : MonoBehaviour
             spawnedObjects.Add(gObject);
         }
     }
+
+    public void RegrowSpawnPoints()
+    {
+        foreach (SpawnPoint sPoint in spawnPositions)
+        {
+            if(!sPoint.occupied)
+                sPoint.GenerateNewObject();
+        }
+    }
 }

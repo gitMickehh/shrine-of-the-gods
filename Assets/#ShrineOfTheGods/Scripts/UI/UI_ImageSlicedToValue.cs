@@ -22,6 +22,6 @@ public class UI_ImageSlicedToValue : MonoBehaviour
         if(!reversed)
             slicedImage.fillAmount = (totalValueFloat - value.Value)/ totalValueFloat;
         else
-            slicedImage.fillAmount = value.Value / totalValueFloat;
+            slicedImage.fillAmount = value.Value / totalValue.Value;
     }
 }

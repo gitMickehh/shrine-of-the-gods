@@ -36,8 +36,6 @@ public class GameManager : MonoBehaviour
 
     public void StartDay()
     {
-        playerTransform.position = playerStartPosition.position;
-
         //call here the events of the day and everything
         gods.ActivateGodEffects();
         clockworkSchedule.RaiseDayEvents(dayNumber.Value);
@@ -52,7 +50,8 @@ public class GameManager : MonoBehaviour
     public void NextDay()
     {
         dayNumber.Value++;
-        
+        playerTransform.position = playerStartPosition.position;
+
         startAnnouncement.StartTransition(dayNumber.Value, clockworkSchedule.GetDayMessage(dayNumber.Value), clockworkSchedule.GetDaySprite(dayNumber.Value));
         resultScreen.HideResults();
         resultScreen.gameObject.SetActive(false);

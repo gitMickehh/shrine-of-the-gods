@@ -12,6 +12,8 @@ public class GodShrine : MonoBehaviour
     public S_Inventory playerInventory;
     public Transform sacraficePosition;
 
+    private List<Collectable> sacrifices;
+
     public void TakeGod(S_God newGod)
     {
         god = newGod;
@@ -19,6 +21,8 @@ public class GodShrine : MonoBehaviour
         transform.name = god.name;
         shrineImage.sprite = god.godShrine;
         shrineTalker.conversationPiece = god.shrineConversation;
+
+        sacrifices = new List<Collectable>();
     }
 
     public void PayRespects()
@@ -26,6 +30,7 @@ public class GodShrine : MonoBehaviour
 
         if(playerInventory.Value != null)
         {
+            sacrifices.Add(playerInventory.Value);
             int retValue = god.GiveItem(playerInventory.Value);
 
             playerInventory.Value.transform.position = sacraficePosition.position;
@@ -34,9 +39,21 @@ public class GodShrine : MonoBehaviour
             //VFX and SFX
             playerInventory.Value.SacrificeItem(retValue);
 
+
             return;
         }
 
         Debug.Log("No items");
+    }
+
+    public void ClearSacrifices()
+    {
+        if (sacrifices == null)
+            return;
+
+        foreach (Collectable item in sacrifices)
+        {
+            Destroy(item.gameObject);
+        }
     }
 }
