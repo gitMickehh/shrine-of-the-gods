@@ -22,6 +22,9 @@ public class GameManager : MonoBehaviour
     public UI_DayAnnouncement startAnnouncement;
     public UI_ResultScreen resultScreen;
 
+    [Header("Transition")]
+    public UI_Transition transition;
+
     private void Start()
     {
         dayNumber.Value = clockworkSchedule.startDay;
@@ -32,6 +35,11 @@ public class GameManager : MonoBehaviour
         }
 
         startAnnouncement.StartTransition(dayNumber.Value, clockworkSchedule.GetDayMessage(dayNumber.Value), clockworkSchedule.GetDaySprite(dayNumber.Value));
+    }
+
+    private void OnDisable()
+    {
+        gods.ResetList();
     }
 
     public void StartDay()
@@ -55,6 +63,13 @@ public class GameManager : MonoBehaviour
         startAnnouncement.StartTransition(dayNumber.Value, clockworkSchedule.GetDayMessage(dayNumber.Value), clockworkSchedule.GetDaySprite(dayNumber.Value));
         resultScreen.HideResults();
         resultScreen.gameObject.SetActive(false);
+    }
+
+    public void PlayerDiedOfHunger()
+    {
+        resultScreen.gameObject.SetActive(true);
+        resultScreen.PlayerDeath("Player died of hunger");
+        //transition.LoadScene(2);
     }
 
 }

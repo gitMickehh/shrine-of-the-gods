@@ -35,15 +35,22 @@ public class UI_ResultScreen : MonoBehaviour
     public Button HintButton;
     public Button BackFromHintButton;
 
+    [Header("Scene Transition")]
+    public UI_Transition transition;
+
     //here
     private List<UI_GodPanel> godPanels;
     private List<string> hintSentences;
     private bool showingHint;
     private bool showingResults;
 
+
+    private float currentTime;
+
     private void Start()
     {
         InitScreen();
+        currentTime = 0;
     }
 
     private void InitScreen()
@@ -76,6 +83,11 @@ public class UI_ResultScreen : MonoBehaviour
     {
         if(showingResults)
         {
+            //counting 2 seconds to make sure player doesn't interact before the screen is shown
+            currentTime+= Time.deltaTime;
+            if (currentTime <= 2f)
+                return;
+
             if(Input.GetButtonDown("Interact"))
             {
                 if (!showingHint)
@@ -114,6 +126,16 @@ public class UI_ResultScreen : MonoBehaviour
 
         UpdateTexts();
         RefreshGods();
+    }
+
+    public void PlayerDeath(string messageTop)
+    {
+        ShowResult();
+        upperTitle.text = messageTop;
+        nextDayText.text = "Restart";
+
+        NextDayButton.onClick.RemoveAllListeners();
+        NextDayButton.onClick.AddListener(()=> transition.LoadScene(1));
     }
 
     public void HideResults()

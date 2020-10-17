@@ -12,3 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1dbef82a93cad3947a796615883c819c, type: 3}
   m_Name: Ra_Power
   m_EditorClassIdentifier: 
+  value: 0

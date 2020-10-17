@@ -12,6 +12,13 @@ public class S_GodsList : S_AbstractList<S_God>
     [SerializeField] List<S_God> strongestGods = new List<S_God>();
     [SerializeField] List<S_God> weakestGods = new List<S_God>();
 
+    public void ResetList()
+    {
+        //when disabling
+        strongestGods.Clear();
+        weakestGods.Clear();
+    }
+
     public void ClearPowers()
     {
         foreach (S_God god in items)
@@ -100,6 +107,17 @@ public class S_GodsList : S_AbstractList<S_God>
         }
 
 
+    }
+
+    public int GetGodRanking(S_God god)
+    {
+        if (strongestGods == null && weakestGods == null)
+            return 0;
+        else if (strongestGods.Count == 0 && weakestGods.Count == 0)
+            return 0;
+
+        var rankedList = items.OrderBy(x => x.currentPower.Value).ToList();
+        return rankedList.IndexOf(god);
     }
 
     //public S_God GetStrongestGod()
