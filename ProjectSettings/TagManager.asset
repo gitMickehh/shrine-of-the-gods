@@ -47,6 +47,9 @@ TagManager:
   - name: Playarea
     uniqueID: 1666728267
     locked: 0
+  - name: VFX
+    uniqueID: 2956999421
+    locked: 0
   - name: Icons
     uniqueID: 2078064321
     locked: 0

@@ -15,6 +15,8 @@ GameObject:
   - component: {fileID: 558240523662263534}
   - component: {fileID: 5551813015303488061}
   - component: {fileID: 3122806189349719579}
+  - component: {fileID: 3396111616200010263}
+  - component: {fileID: 6156939046807873133}
   m_Layer: 8
   m_Name: FirePrefab
   m_TagString: Untagged
@@ -170,6 +172,60 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 11400000, guid: bac6dcef7a1e2b0408fe94d85c8e100f,
             type: 2}
           m_ObjectArgumentAssemblyTypeName: S_Fire, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &3396111616200010263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1474790949693018013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49071e17f5c33be4fa9171c1bee0a4cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 4c65524d28ebf3b48bbaab2a5aad517f, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2305211896249433227}
+        m_MethodName: KillFireImmediatly
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &6156939046807873133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1474790949693018013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49071e17f5c33be4fa9171c1bee0a4cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: de966a50acddd784dbecc98a53845818, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2305211896249433227}
+        m_MethodName: ReKindleFire
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -407,7 +463,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 2078064321
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 1857245051215737609, guid: 57e8c1c5a9db983458a7e91325d3a411,
     type: 3}

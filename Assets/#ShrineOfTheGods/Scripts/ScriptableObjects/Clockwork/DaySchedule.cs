@@ -12,6 +12,7 @@ public class DaySchedule : ScriptableObject
     [Tooltip("Message of the day if the day is not here or doesn't have a custom message")]
     public string fallbackMessage;
     public Sprite fallbackSprite;
+    public float fallbackDayMultiplyer = 1;
 
     public List<SOG_Day> schedule = new List<SOG_Day>();
 
@@ -30,6 +31,16 @@ public class DaySchedule : ScriptableObject
                 dayEvent.Raise();
             }
         }
+    }
+
+    public float GetDayMultiplyer(int dayNumber)
+    {
+        SOG_Day day = schedule.Find(x => x.dayNumber == dayNumber);
+
+        if (day == null)
+            return fallbackDayMultiplyer;
+        else
+            return day.customDayMultiplyer;
     }
 
     public string GetDayMessage(int dayNumber)

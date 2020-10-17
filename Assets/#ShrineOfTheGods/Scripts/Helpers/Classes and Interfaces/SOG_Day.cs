@@ -7,7 +7,7 @@ public class SOG_Day
 {
     public string name;
     public int dayNumber;
-    public int customDayMultiplyer = 1;
+    public float customDayMultiplyer = 1;
     public Sprite dayCustomSprite;
     public List<GameEvent> customEvents = new List<GameEvent>();
 

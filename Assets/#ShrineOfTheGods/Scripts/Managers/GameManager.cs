@@ -14,6 +14,9 @@ public class GameManager : MonoBehaviour
     public Transform playerTransform;
     public Transform playerStartPosition;
 
+    [Header("Settings")]
+    public S_Float dayMultiplyer;
+
     [Header("Randomness")]
     public S_Bool useCustomSeed;
     public S_Int customSeed;
@@ -34,6 +37,7 @@ public class GameManager : MonoBehaviour
             Random.InitState(customSeed.Value);
         }
 
+        dayMultiplyer.Value = clockworkSchedule.GetDayMultiplyer(dayNumber.Value);
         startAnnouncement.StartTransition(dayNumber.Value, clockworkSchedule.GetDayMessage(dayNumber.Value), clockworkSchedule.GetDaySprite(dayNumber.Value));
     }
 
@@ -59,6 +63,8 @@ public class GameManager : MonoBehaviour
     {
         dayNumber.Value++;
         playerTransform.position = playerStartPosition.position;
+        
+        dayMultiplyer.Value = clockworkSchedule.GetDayMultiplyer(dayNumber.Value);
 
         startAnnouncement.StartTransition(dayNumber.Value, clockworkSchedule.GetDayMessage(dayNumber.Value), clockworkSchedule.GetDaySprite(dayNumber.Value));
         resultScreen.HideResults();

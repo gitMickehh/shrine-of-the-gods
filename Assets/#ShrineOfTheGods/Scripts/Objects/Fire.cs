@@ -43,10 +43,14 @@ public class Fire : MonoBehaviour
         return fireAlive;
     }
 
-    public void KillFireImmediatly(int fireLevel)
+    public void KillFireImmediatly(int fireMaxLevel)
     {
-        if (fireLevel >= firePower)
+        if (fireMaxLevel >= firePower)
             KillFire();
+        else
+        {
+            firePower = 1;
+        }
     }
 
     public void KillFire()

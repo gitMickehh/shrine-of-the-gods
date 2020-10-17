@@ -23,6 +23,10 @@ public class WorldGenerator : MonoBehaviour
     public Vector2Int worldSize;
     private Vector2Int middleCell;
 
+    [Header("Effects In World")]
+    public GameObject rain_VFX_Prefab;
+    private List<GameObject> allRainVFX;
+
     //spawned objects
     private List<PieceOfLand> lands;
     private List<GodShrine> shrines;
@@ -43,7 +47,6 @@ public class WorldGenerator : MonoBehaviour
         CalculateMiddle();
         GenerateLands();
     }
-
 
     private List<S_LandType> GetLandsBasedOnRarity()
     {
@@ -184,6 +187,45 @@ public class WorldGenerator : MonoBehaviour
     {
         middleCell.x = Mathf.FloorToInt(worldSize.x / 2);
         middleCell.y = Mathf.FloorToInt(worldSize.y / 2);
+    }
+
+    public void Rain(bool rainOn)
+    {
+        if(rainOn)
+        {
+            if (allRainVFX == null)
+                allRainVFX = new List<GameObject>();
+            else
+            {
+                foreach (GameObject rain in allRainVFX)
+                {
+                    Destroy(rain);
+                }
+                allRainVFX.Clear();
+            }
+
+            for (int i = 0; i < worldSize.x; i++)
+            {
+                for (int j = 0; j < worldSize.y; j++)
+                {
+                    var rainObj = Instantiate(rain_VFX_Prefab, GetCellPosition(i, j), Quaternion.identity);
+                    rainObj.transform.SetParent(transform);
+                    allRainVFX.Add(rainObj);
+                }
+            }
+        }
+        else
+        {
+            if (allRainVFX == null)
+                return;
+            else
+            {
+                foreach (GameObject rain in allRainVFX)
+                {
+                    Destroy(rain);
+                }
+            }
+        }
     }
 
     private void OnDrawGizmos()
