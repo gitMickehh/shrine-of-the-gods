@@ -123,6 +123,12 @@ public class UI_ResultScreen : MonoBehaviour
         {
             gPanel.RefreshStats();
         }
+
+        int leadDifference = godsList.GetMaxDifference();
+        if(leadDifference >= godsList.leadOverpowerThreshold)
+        {
+            PlayerDeath(godsList.GetLeadGod() + " overpowerd the other gods.");
+        }
     }
 
     public void ShowResult()

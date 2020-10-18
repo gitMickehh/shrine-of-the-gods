@@ -8,6 +8,7 @@ public class S_GodsList : S_AbstractList<S_God>
 {
     [Tooltip("This will be the difference in power to make this god powerful or weak")]
     public int PowerGap = 3;
+    public int leadOverpowerThreshold = 6;
 
     [SerializeField] List<S_God> strongestGods = new List<S_God>();
     [SerializeField] List<S_God> weakestGods = new List<S_God>();
@@ -112,6 +113,53 @@ public class S_GodsList : S_AbstractList<S_God>
         }
 
 
+    }
+
+    public int GetDifferenceBetweenFirstTwo()
+    {
+        if (strongestGods == null && weakestGods == null)
+            return 0;
+        else if (strongestGods.Count == 0 && weakestGods.Count == 0)
+            return 0;
+
+        var rankedList = items.OrderByDescending(x => x.currentPower.Value).ToList();
+
+        int diff = rankedList[0].currentPower.Value - rankedList[1].currentPower.Value;
+
+        return diff;
+    }
+
+    public int GetMaxDifference()
+    {
+        if (strongestGods == null && weakestGods == null)
+            return 0;
+        else if (strongestGods.Count == 0 && weakestGods.Count == 0)
+            return 0;
+
+        var rankedList = items.OrderByDescending(x => x.currentPower.Value).ToList();
+
+        int maxDiff = 0;
+        for (int i = 1; i < rankedList.Count; i++)
+        {
+            int diff = rankedList[i - 1].currentPower.Value - rankedList[i].currentPower.Value;
+            if(diff > maxDiff)
+            {
+                maxDiff = diff;
+            }
+        }
+
+        return maxDiff;
+    }
+
+    public string GetLeadGod()
+    {
+        if (strongestGods == null && weakestGods == null)
+            return "";
+        else if (strongestGods.Count == 0 && weakestGods.Count == 0)
+            return "";
+
+        var rankedList = items.OrderByDescending(x => x.currentPower.Value).ToList();
+        return rankedList[0].name;
     }
 
     public int GetGodRanking(S_God god)
