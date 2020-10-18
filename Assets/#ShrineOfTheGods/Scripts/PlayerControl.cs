@@ -65,6 +65,8 @@ public class PlayerControl : MonoBehaviour
         Animate();
     }
 
+    
+
     void ProcessKeyboardInput()
     {
         movementDirection = Vector2.zero;
@@ -119,6 +121,10 @@ public class PlayerControl : MonoBehaviour
         myAnimator.SetFloat("Horizontal", direction.x);
         myAnimator.SetFloat("Vertical", direction.y);
         myAnimator.SetFloat("Speed", movementSpeed);
+    }
+    public void PrayAnimation()
+    {
+        myAnimator.SetTrigger("Pray");
     }
 
     void IndicateInteractability()

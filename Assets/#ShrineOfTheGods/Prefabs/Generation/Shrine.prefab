@@ -211,6 +211,20 @@ MonoBehaviour:
   shrineTalker: {fileID: 985044786890640118}
   playerInventory: {fileID: 11400000, guid: b3b5762763a431a48942e650343548a4, type: 2}
   sacraficePosition: {fileID: 1314714481153330826}
+  OnGiveSacrifice:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 971a04007a78dee43b84f47a0b9fbf30, type: 2}
+        m_MethodName: Raise
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &587198650623118278
 GameObject:
   m_ObjectHideFlags: 0
@@ -339,7 +353,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 2078064321
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: -409557931340475988, guid: 57e8c1c5a9db983458a7e91325d3a411,
     type: 3}

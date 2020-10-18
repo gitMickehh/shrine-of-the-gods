@@ -36,7 +36,11 @@ public class Collectable : MonoBehaviour
         follower.enabled = true;
         follower.StartFollowing(playerInventory.player.transform);
 
-        rb.simulated = true;
+        //rb.simulated = true;
+
+        //i make this false because if i keep it simulated, it will be the closest thing to the player
+        //to interact with :/
+        rb.simulated = false;
 
         OnCollect.Invoke();
     }

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class GodShrine : MonoBehaviour
 {
@@ -13,6 +14,8 @@ public class GodShrine : MonoBehaviour
     public Transform sacraficePosition;
 
     private List<Collectable> sacrifices;
+
+    public UnityEvent OnGiveSacrifice;
 
     public void TakeGod(S_God newGod)
     {
@@ -30,6 +33,9 @@ public class GodShrine : MonoBehaviour
 
         if(playerInventory.Value != null)
         {
+
+            OnGiveSacrifice.Invoke();
+
             sacrifices.Add(playerInventory.Value);
             int retValue = god.GiveItem(playerInventory.Value);
 

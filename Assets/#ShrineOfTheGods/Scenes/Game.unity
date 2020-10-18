@@ -545,6 +545,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: 222f6a7c8dbee88438fd71880e29d7dc, type: 2}
+        m_MethodName: Raise
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &115272004
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -599,6 +610,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: 7828f82ce911b2341b052b022910d203, type: 2}
+        m_MethodName: Raise
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &115272006
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -617,6 +639,17 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 115272001}
         m_MethodName: PlayerDiedOfHunger
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: 222f6a7c8dbee88438fd71880e29d7dc, type: 2}
+        m_MethodName: Raise
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2052,6 +2085,7 @@ GameObject:
   - component: {fileID: 484906691}
   - component: {fileID: 484906690}
   - component: {fileID: 484906692}
+  - component: {fileID: 484906693}
   m_Layer: 9
   m_Name: Player
   m_TagString: Player
@@ -2162,7 +2196,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49071e17f5c33be4fa9171c1bee0a4cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: 02075178d9e04e24b8805e7258aa2491, type: 2}
+  Event: {fileID: 11400000, guid: 7828f82ce911b2341b052b022910d203, type: 2}
   Response:
     m_PersistentCalls:
       m_Calls:
@@ -2242,7 +2276,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49071e17f5c33be4fa9171c1bee0a4cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: 65d00f5208cc0e94587bad9f8bc036b4, type: 2}
+  Event: {fileID: 11400000, guid: 222f6a7c8dbee88438fd71880e29d7dc, type: 2}
   Response:
     m_PersistentCalls:
       m_Calls:
@@ -2260,6 +2294,33 @@ MonoBehaviour:
       - m_Target: {fileID: 484906691}
         m_MethodName: Activate
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &484906693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 484906685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49071e17f5c33be4fa9171c1bee0a4cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 971a04007a78dee43b84f47a0b9fbf30, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 484906687}
+        m_MethodName: PrayAnimation
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
