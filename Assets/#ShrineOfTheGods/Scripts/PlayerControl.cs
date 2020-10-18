@@ -44,16 +44,18 @@ public class PlayerControl : MonoBehaviour
 
     public void EnableControl()
     {
+        //Debug.Log("Enable Controls");
         controlable = true;
     }
 
     public void Disablecontrol()
     {
-
+        //Debug.Log("Disable Controls");
         controlable = false;
         direction = Vector2.zero;
         playerAbsoluteDirection.Value = direction;
         _rb.velocity = Vector2.zero;
+        Animate();
     }
 
     void Update()
@@ -123,6 +125,7 @@ public class PlayerControl : MonoBehaviour
         myAnimator.SetFloat("Vertical", direction.y);
         myAnimator.SetFloat("Speed", movementSpeed);
     }
+
     public void PrayAnimation()
     {
         myAnimator.SetTrigger("Pray");

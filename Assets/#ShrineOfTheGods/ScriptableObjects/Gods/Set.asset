@@ -24,19 +24,19 @@ MonoBehaviour:
   godStrong: {fileID: 11400000, guid: 96d0edb9efd978f41a2d1654eb38379a, type: 2}
   godWeak: {fileID: 11400000, guid: f1403055a709a7b4596bb28e786a6ae9, type: 2}
   empoweringItems:
-  - itemSacrificed: {fileID: 11400000, guid: ce5db2d6bb27a25489fe01e5a954a498, type: 2}
+  - itemSacrificed: {fileID: 11400000, guid: 70df22be05a120e469e79ad14a6a97e8, type: 2}
     burnedBonus: 0
+    rottenBonus: 1
+  - itemSacrificed: {fileID: 11400000, guid: 58ee9741eb390b34696f5c858b3f426b, type: 2}
+    burnedBonus: 1
     rottenBonus: 1
   - itemSacrificed: {fileID: 11400000, guid: 0e683a57769665e4484e5a1445592ce7, type: 2}
     burnedBonus: 0
     rottenBonus: 1
-  - itemSacrificed: {fileID: 11400000, guid: 70df22be05a120e469e79ad14a6a97e8, type: 2}
+  - itemSacrificed: {fileID: 11400000, guid: ce5db2d6bb27a25489fe01e5a954a498, type: 2}
     burnedBonus: 0
     rottenBonus: 1
   - itemSacrificed: {fileID: 11400000, guid: 8b8dcd5a3980dc04c89549cbad33e6dc, type: 2}
-    burnedBonus: 1
-    rottenBonus: 1
-  - itemSacrificed: {fileID: 11400000, guid: 58ee9741eb390b34696f5c858b3f426b, type: 2}
     burnedBonus: 1
     rottenBonus: 1
   weakeningItems:

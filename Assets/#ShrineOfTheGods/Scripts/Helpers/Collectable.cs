@@ -112,4 +112,8 @@ public class Collectable : MonoBehaviour
             Destroy(rotObject);
     }
 
+    public void ClearSelf()
+    {
+
+    }
 }

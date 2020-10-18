@@ -54,12 +54,12 @@ public class GodShrine : MonoBehaviour
 
     public void ClearSacrifices()
     {
-        if (sacrifices == null)
-            return;
+        //if (sacrifices == null)
+        //    return;
 
-        foreach (Collectable item in sacrifices)
-        {
-            Destroy(item.gameObject);
-        }
+        //foreach (Collectable item in sacrifices)
+        //{
+        //    item.ClearSelf();
+        //}
     }
 }

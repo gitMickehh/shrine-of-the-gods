@@ -59,7 +59,9 @@ public class UI_DayAnnouncement : MonoBehaviour
     {
         yield return new WaitForSeconds(holdTime);
         canvasGroup.alpha = 1;
-        canvasGroup.DOFade(0, animationTime).OnComplete(()=>OnAnnouncementFinish.Raise());
+        canvasGroup.DOFade(0, animationTime).OnComplete(
+            () => OnAnnouncementFinish.Raise());
+        
     }
     
 }

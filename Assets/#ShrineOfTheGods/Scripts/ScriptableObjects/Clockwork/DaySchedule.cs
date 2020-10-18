@@ -18,14 +18,24 @@ public class DaySchedule : ScriptableObject
 
     public void RaiseDayEvents(int dayNumber)
     {
+        Debug.Log("Raising day " + dayNumber + " events.");
         SOG_Day day = schedule.Find(x => x.dayNumber == dayNumber);
 
         if (day == null)
+        {
+            Debug.Log("none");
             return;
+        }
         else if (day.customEvents.Count == 0)
-            return;
+        {
+            Debug.Log("none");
+            return; 
+        }
         else
         {
+            Debug.Log("there is");
+
+
             foreach (GameEvent dayEvent in day.customEvents)
             {
                 dayEvent.Raise();

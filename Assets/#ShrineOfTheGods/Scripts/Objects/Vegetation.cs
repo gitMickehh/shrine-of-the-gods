@@ -17,8 +17,8 @@ public class Vegetation : MonoBehaviour
         transform.name = plantTemplate.name;
         plantRenderer.sprite = plantTemplate.sprite;
         interactable = plantTemplate.interactable;
-        
-        if(interactable)
+
+        if (interactable)
             myCollectable.myElement = plantTemplate;
     }
 
@@ -34,6 +34,17 @@ public class Vegetation : MonoBehaviour
 
         if (interactable)
             myCollectable.myElement = plantTemplate;
+    }
+
+    public void Unrot()
+    {
+        plantRenderer.sprite = plantTemplate.sprite;
+    }
+
+    public void Rot()
+    {
+        if (plantTemplate.rottenSprite != null)
+            plantRenderer.sprite = plantTemplate.rottenSprite;
     }
 
     public void VegetationPicked()

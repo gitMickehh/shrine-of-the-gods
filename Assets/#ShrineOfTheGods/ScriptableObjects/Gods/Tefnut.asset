@@ -37,9 +37,9 @@ MonoBehaviour:
     burnedBonus: 0
     rottenBonus: 0
   weakeningItems:
-  - itemSacrificed: {fileID: 11400000, guid: 8b8dcd5a3980dc04c89549cbad33e6dc, type: 2}
+  - itemSacrificed: {fileID: 11400000, guid: 58ee9741eb390b34696f5c858b3f426b, type: 2}
     burnedBonus: 1
     rottenBonus: 1
-  - itemSacrificed: {fileID: 11400000, guid: 58ee9741eb390b34696f5c858b3f426b, type: 2}
+  - itemSacrificed: {fileID: 11400000, guid: 8b8dcd5a3980dc04c89549cbad33e6dc, type: 2}
     burnedBonus: 1
     rottenBonus: 1

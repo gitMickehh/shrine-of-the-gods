@@ -16,7 +16,6 @@ public class DayTimer : MonoBehaviour
     public S_Float timeMultiplyer;
 
     [Header("Events")]
-    public GameEvent dayStart;
     public GameEvent dayEnd;
 
     private void Start()
@@ -33,7 +32,7 @@ public class DayTimer : MonoBehaviour
         currentTime.Value = 0;
         running = true;
 
-        dayStart.Raise();
+        //dayStart.Raise();
     }
 
     private void ResetValues()

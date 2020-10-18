@@ -642,6 +642,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: 02075178d9e04e24b8805e7258aa2491, type: 2}
+        m_MethodName: Raise
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 11400000, guid: 7828f82ce911b2341b052b022910d203, type: 2}
         m_MethodName: Raise
         m_Mode: 1
@@ -3007,17 +3018,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 11400000, guid: c1e7619a34a879246919fb563171560a, type: 2}
-        m_MethodName: Raise
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &595947161
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5236,7 +5236,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.714
   m_Color: {r: 0.28235295, g: 0.62352943, b: 0.7058824, a: 1}
-  m_Intensity: 0.6
+  m_Intensity: 0.4
   m_LightVolumeOpacity: 0.035
   m_ApplyToSortingLayers: 00000000071b6f654b415863
   m_LightCookieSprite: {fileID: 0}
@@ -6125,7 +6125,6 @@ MonoBehaviour:
   dayTimeMultiplier: 1
   currentTime: {fileID: 11400000, guid: bbec1257ff2cdb447b122d6f4b0c6a7d, type: 2}
   timeMultiplyer: {fileID: 11400000, guid: 81ec9f7412c67394aac27a75e3684b02, type: 2}
-  dayStart: {fileID: 11400000, guid: 02075178d9e04e24b8805e7258aa2491, type: 2}
   dayEnd: {fileID: 11400000, guid: 65d00f5208cc0e94587bad9f8bc036b4, type: 2}
 --- !u!4 &1194198249
 Transform:
@@ -6153,7 +6152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49071e17f5c33be4fa9171c1bee0a4cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: 803ad74f9e9f89849bfad077bd9c72e3, type: 2}
+  Event: {fileID: 11400000, guid: 02075178d9e04e24b8805e7258aa2491, type: 2}
   Response:
     m_PersistentCalls:
       m_Calls:

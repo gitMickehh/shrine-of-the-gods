@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4dfee9e611cb71b48b451f2f0a8e61ae, type: 3}
-  m_Name: Clockwork Schedule
+  m_Name: TestRain
   m_EditorClassIdentifier: 
   startDay: 1
   fallbackMessage: 'Survive. Serve all. Find balance. '
@@ -18,21 +18,10 @@ MonoBehaviour:
     type: 3}
   fallbackDayMultiplyer: 1
   schedule:
-  - name: Find balance.
-    dayNumber: 2
-    customDayMultiplyer: 1
-    dayCustomSprite: {fileID: 0}
-    customEvents: []
   - name: Rain, it's hard to see and to burn.
-    dayNumber: 3
+    dayNumber: 1
     customDayMultiplyer: 1.1
     dayCustomSprite: {fileID: 810941878276341394, guid: 500fa8b5e5205c740acb151cb3bb30c9,
       type: 3}
     customEvents:
     - {fileID: 11400000, guid: 3f8af261e6708464da9c56f75d104f3e, type: 2}
-  - name: Rain is clearned up!
-    dayNumber: 4
-    customDayMultiplyer: 1
-    dayCustomSprite: {fileID: 0}
-    customEvents:
-    - {fileID: 11400000, guid: 11e36d9c207a0ad449a86c44cf3e30e6, type: 2}

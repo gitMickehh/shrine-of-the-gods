@@ -48,9 +48,7 @@ public class GameManager : MonoBehaviour
 
     public void StartDay()
     {
-        //call here the events of the day and everything
         gods.ActivateGodEffects();
-        clockworkSchedule.RaiseDayEvents(dayNumber.Value);
     }
 
     public void DayEnd()
@@ -67,6 +65,8 @@ public class GameManager : MonoBehaviour
         dayMultiplyer.Value = clockworkSchedule.GetDayMultiplyer(dayNumber.Value);
 
         startAnnouncement.StartTransition(dayNumber.Value, clockworkSchedule.GetDayMessage(dayNumber.Value), clockworkSchedule.GetDaySprite(dayNumber.Value));
+        clockworkSchedule.RaiseDayEvents(dayNumber.Value);
+
         resultScreen.HideResults();
         resultScreen.gameObject.SetActive(false);
     }
