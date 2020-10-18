@@ -14,6 +14,8 @@ public class Mummy : MonoBehaviour
     public float rottingRange;
     public LayerMask infectionLayer;
 
+    DG.Tweening.Core.TweenerCore<Vector2, Vector2, DG.Tweening.Plugins.Options.VectorOptions> tween;
+
     private void Start()
     {
         Seek();
@@ -44,7 +46,21 @@ public class Mummy : MonoBehaviour
     private void Seek()
     {
         //myBody.velocity = GetRandomDirection() * Time.deltaTime * speed;
-        myBody.DOMove(GetRandomPosition(), speed).SetEase(Ease.Linear).OnComplete(()=>Seek());
+        tween = myBody.DOMove(GetRandomPosition(), speed).SetEase(Ease.Linear).OnComplete(()=>Seek());
+    }
+
+    public void PauseMummy(bool pauseOn)
+    {
+        if(pauseOn)
+        {
+            if (tween != null)
+                tween.Pause();
+        }
+        else
+        {
+            if (tween != null)
+                tween.Play();
+        }
     }
 
     public void OnHitSomething()

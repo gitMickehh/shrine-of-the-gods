@@ -61,4 +61,9 @@ public class DayTimer : MonoBehaviour
             }
         }
     }
+
+    public void PauseTimer(bool pauseOn)
+    {
+        running = !pauseOn;
+    }
 }

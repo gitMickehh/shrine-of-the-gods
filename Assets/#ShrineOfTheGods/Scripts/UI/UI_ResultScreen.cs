@@ -5,10 +5,12 @@ using UnityEngine;
 using TMPro;
 using DG.Tweening;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class UI_ResultScreen : MonoBehaviour
 {
     public CanvasGroup canvasGroup;
+    public EventSystem uiEventSystem;
 
     [Header("Animation")]
     public float fadeTime = 1f;
@@ -130,6 +132,8 @@ public class UI_ResultScreen : MonoBehaviour
         canvasGroup.interactable = true;
         canvasGroup.blocksRaycasts = true;
 
+        uiEventSystem.firstSelectedGameObject = NextDayButton.gameObject;
+
         UpdateTexts();
         RefreshGods();
     }
@@ -150,13 +154,17 @@ public class UI_ResultScreen : MonoBehaviour
         
         canvasGroup.DOFade(2, fadeTime/2);
         canvasGroup.interactable = false;
+
         HideHint();
+        uiEventSystem.firstSelectedGameObject = null;
     }
 
     public void ShowHint()
     {
         if(!showingHint)
         {
+           uiEventSystem.firstSelectedGameObject = BackFromHintButton.gameObject;
+
            showingHint = true;
            HintObject.SetActive(true);
         }
@@ -188,6 +196,8 @@ public class UI_ResultScreen : MonoBehaviour
     {
         showingHint = false;
         showingResults = true;
+        uiEventSystem.firstSelectedGameObject = NextDayButton.gameObject;
+
         HintObject.SetActive(false);
     }
 

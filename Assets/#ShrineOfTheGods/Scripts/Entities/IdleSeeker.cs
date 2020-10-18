@@ -28,6 +28,26 @@ public class IdleSeeker : MonoBehaviour
     private int currentTarget;
     private DG.Tweening.Core.TweenerCore<Vector2, Vector2, DG.Tweening.Plugins.Options.VectorOptions> moveTween;
 
+    public void PauseSeeker(bool pauseState)
+    {
+        if (pauseState)
+        {
+            isIdle = false;
+            StopAllCoroutines();
+
+            if (moveTween != null)
+                moveTween.Kill();
+        }
+        else
+        {
+            if (isIdle)
+                return;
+
+            isIdle = true;
+            MoveToNext();
+        }
+    }
+
     public void InterruptSeeker(bool interruptState)
     {
         if (!interruptable)

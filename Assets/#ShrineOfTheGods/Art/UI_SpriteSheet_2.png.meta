@@ -5,6 +5,12 @@ TextureImporter:
   - first:
       213: -6449954914249008636
     second: Game_Title
+  - first:
+      213: 2999287849362011759
+    second: UI_Button_Play_Selected_InPause
+  - first:
+      213: 5412849084695033213
+    second: UI_Button_Home_Selected_InPause
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -122,7 +128,7 @@ TextureImporter:
         width: 68
         height: 30
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -130,6 +136,48 @@ TextureImporter:
       bones: []
       spriteID: 40a17e6cd282d76a0800000000000000
       internalID: -6449954914249008636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Button_Play_Selected_InPause
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 24
+        width: 48
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f663e58786c9f9920800000000000000
+      internalID: 2999287849362011759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Button_Home_Selected_InPause
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 2
+        width: 48
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d75bb04609d4e1b40800000000000000
+      internalID: 5412849084695033213
       vertices: []
       indices: 
       edges: []

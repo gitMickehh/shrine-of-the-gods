@@ -98,6 +98,18 @@ TextureImporter:
   - first:
       213: 1218546615228221309
     second: UI_Button_Twitter_Selected
+  - first:
+      213: -2129506965007406800
+    second: UI_SunnyDay_Icon
+  - first:
+      213: 810941878276341394
+    second: UI_RainDay_Icon
+  - first:
+      213: -4696077939954729438
+    second: UI_Button_NextHint_Selected
+  - first:
+      213: -8630631327294278542
+    second: UI_Button_HintClose_Selected
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -845,7 +857,7 @@ TextureImporter:
         width: 15
         height: 15
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -866,7 +878,7 @@ TextureImporter:
         width: 15
         height: 15
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -874,6 +886,90 @@ TextureImporter:
       bones: []
       spriteID: d77ceeeb0b529e010800000000000000
       internalID: 1218546615228221309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_SunnyDay_Icon
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 121
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 039630ca2b87272e0800000000000000
+      internalID: -2129506965007406800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_RainDay_Icon
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 121
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29e362c775b014b00800000000000000
+      internalID: 810941878276341394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Button_NextHint_Selected
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 47
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22e33779efd24deb0800000000000000
+      internalID: -4696077939954729438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Button_HintClose_Selected
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 47
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 274344de886d93880800000000000000
+      internalID: -8630631327294278542
       vertices: []
       indices: 
       edges: []

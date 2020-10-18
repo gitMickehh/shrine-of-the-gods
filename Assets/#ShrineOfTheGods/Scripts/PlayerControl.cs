@@ -51,6 +51,8 @@ public class PlayerControl : MonoBehaviour
     {
 
         controlable = false;
+        direction = Vector2.zero;
+        playerAbsoluteDirection.Value = direction;
         _rb.velocity = Vector2.zero;
     }
 
@@ -65,7 +67,6 @@ public class PlayerControl : MonoBehaviour
         Animate();
     }
 
-    
 
     void ProcessKeyboardInput()
     {
