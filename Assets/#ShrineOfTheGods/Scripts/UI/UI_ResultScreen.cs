@@ -127,8 +127,17 @@ public class UI_ResultScreen : MonoBehaviour
         int leadDifference = godsList.GetMaxDifference();
         if(leadDifference >= godsList.leadOverpowerThreshold)
         {
-            PlayerDeath(godsList.GetLeadGod() + " overpowerd the other gods.");
+            RestartMessage(godsList.GetLeadGod() + " overpowerd the other gods.");
         }
+    }
+
+    private void RestartMessage(string messageTop)
+    {
+        upperTitle.text = messageTop;
+        nextDayText.text = "Restart";
+
+        NextDayButton.onClick.RemoveAllListeners();
+        NextDayButton.onClick.AddListener(() => transition.LoadScene(1));
     }
 
     public void ShowResult()
