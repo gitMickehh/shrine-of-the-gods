@@ -14,7 +14,7 @@ public class UI_ResultScreen : MonoBehaviour
     public float fadeTime = 1f;
 
     [Header("References")]
-    public List<S_God> gods;
+    public S_GodsList godsList;
     public S_Int numberOfDays;
 
     [Header("UI")]
@@ -50,6 +50,10 @@ public class UI_ResultScreen : MonoBehaviour
     private void Start()
     {
         InitScreen();
+    }
+
+    private void OnEnable()
+    {
         currentTime = 0;
     }
 
@@ -70,11 +74,11 @@ public class UI_ResultScreen : MonoBehaviour
         }
 
         godPanels = new List<UI_GodPanel>();
-        for (int i = 0; i < gods.Count; i++)
+        for (int i = 0; i < godsList.items.Count; i++)
         {
             UI_GodPanel gpanel= Instantiate(godPanel,GodPanelHolder.transform).GetComponent<UI_GodPanel>();
 
-            gpanel.Init(gods[i]);
+            gpanel.Init(godsList.items[i]);
             godPanels.Add(gpanel);
         }
     }
@@ -111,6 +115,8 @@ public class UI_ResultScreen : MonoBehaviour
 
     private void RefreshGods()
     {
+        godsList.CalculateGap();
+
         foreach (UI_GodPanel gPanel in godPanels)
         {
             gPanel.RefreshStats();
@@ -181,6 +187,7 @@ public class UI_ResultScreen : MonoBehaviour
     public void HideHint()
     {
         showingHint = false;
+        showingResults = true;
         HintObject.SetActive(false);
     }
 

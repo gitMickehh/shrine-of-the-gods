@@ -32,6 +32,7 @@ public class UI_GodPanel : MonoBehaviour
 
     public void RefreshStats() 
     {
+
         godName.text = god.name;
         godImage.sprite = god.godImage;
         godPowerText.text = god.currentPower.Value.ToString();
@@ -52,7 +53,8 @@ public class UI_GodPanel : MonoBehaviour
         int ranking = godsList.GetGodRanking(god);
 
         float newScale = (godsList.items.Count - ranking)/(float)godsList.items.Count;
-        //Debug.Log("god: " + god.name + ", rank: " + ranking + ", new scale: "+ newScale);
+        Debug.Log("god: " + god.name + ", rank: " + ranking + ", new scale: "+ newScale);
+        
         newScale = Mathf.Clamp(newScale,0.5f,1.0f);
 
         godImage.rectTransform.DOScale(newScale, animationTime).SetEase(animationEasing);

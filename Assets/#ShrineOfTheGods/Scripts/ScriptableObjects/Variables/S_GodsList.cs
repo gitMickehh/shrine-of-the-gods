@@ -11,7 +11,7 @@ public class S_GodsList : S_AbstractList<S_God>
 
     [SerializeField] List<S_God> strongestGods = new List<S_God>();
     [SerializeField] List<S_God> weakestGods = new List<S_God>();
-
+    [SerializeField] List<S_God> neutralGods = new List<S_God>();
     public void ResetList()
     {
         //when disabling
@@ -34,6 +34,8 @@ public class S_GodsList : S_AbstractList<S_God>
         else if (items.Count == 1)
             return;
 
+        //Debug.Log("Calculating Gap");
+
         strongestGods = new List<S_God>();
         weakestGods = new List<S_God>();
 
@@ -49,6 +51,10 @@ public class S_GodsList : S_AbstractList<S_God>
                 CalculateDifference(powerDifference, god1, god2);
             }
         }
+
+        strongestGods.OrderByDescending(x=>x.currentPower.Value);
+        weakestGods.OrderByDescending(x=>x.currentPower.Value);
+        neutralGods = items.Except(strongestGods.Union(weakestGods).ToList()).ToList();
     }
 
     private void CalculateDifference(int powerDifference, S_God god1, S_God god2)
@@ -80,7 +86,6 @@ public class S_GodsList : S_AbstractList<S_God>
     {
         CalculateGap();
 
-        List<S_God> neutralGods = items.Except(strongestGods.Union(weakestGods).ToList()).ToList();
 
         if(strongestGods.Count != 0)
         {
@@ -116,7 +121,7 @@ public class S_GodsList : S_AbstractList<S_God>
         else if (strongestGods.Count == 0 && weakestGods.Count == 0)
             return 0;
 
-        var rankedList = items.OrderBy(x => x.currentPower.Value).ToList();
+        var rankedList = items.OrderByDescending(x => x.currentPower.Value).ToList();
         return rankedList.IndexOf(god);
     }
 

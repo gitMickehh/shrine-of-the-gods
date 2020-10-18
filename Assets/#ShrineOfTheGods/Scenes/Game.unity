@@ -2630,11 +2630,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvasGroup: {fileID: 566791979}
   fadeTime: 1
-  gods:
-  - {fileID: 11400000, guid: b3f43b6cdc611624490c877f82c1f071, type: 2}
-  - {fileID: 11400000, guid: c97e099541a4a8d48bac8818c53f8ec2, type: 2}
-  - {fileID: 11400000, guid: 996b43a07e75bdf4585af85bbd847a35, type: 2}
-  - {fileID: 11400000, guid: a663466ed3c985940a347ed766314682, type: 2}
+  godsList: {fileID: 11400000, guid: f9704dc3480eaff4aa01df3af7cd2a03, type: 2}
   numberOfDays: {fileID: 11400000, guid: 3ee5c20d158dc984b96b945d48b5b097, type: 2}
   upperTitle: {fileID: 945465020}
   GodPanelHolder: {fileID: 1289385582}
@@ -8477,8 +8473,8 @@ MonoBehaviour:
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
-  m_FillClockwise: 0
-  m_FillOrigin: 2
+  m_FillClockwise: 1
+  m_FillOrigin: 1
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
 --- !u!222 &2036532846
