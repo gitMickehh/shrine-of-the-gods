@@ -62,7 +62,7 @@ public class PlayerControl : MonoBehaviour
         IndicateInteractability();
         ProcessKeyboardInput();
         Move();
-        //Animate();
+        Animate();
     }
 
     void ProcessKeyboardInput()

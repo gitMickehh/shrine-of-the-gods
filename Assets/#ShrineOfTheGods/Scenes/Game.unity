@@ -8999,7 +8999,7 @@ GameObject:
   - component: {fileID: 2127808042}
   - component: {fileID: 2127808043}
   m_Layer: 9
-  m_Name: Square
+  m_Name: PlayerSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9080,7 +9080,7 @@ Animator:
   m_GameObject: {fileID: 2127808040}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7a8dd7acc669dcd47a702706676c4974, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
