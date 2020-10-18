@@ -38,7 +38,7 @@ public class S_God : ScriptableObject
 
     public int GiveItem(Collectable item)
     {
-        Debug.Log("Given item, " + item.myElement.name);
+        //Debug.Log("Given item, " + item.myElement.name);
 
         SacrificeSetting found = empoweringItems.Find(x => x.itemSacrificed.name == item.myElement.name);
         if (found != null)
@@ -54,7 +54,7 @@ public class S_God : ScriptableObject
                 currentPower.Value++;
             
             
-            Debug.Log("POSITIVE");
+            //Debug.Log("POSITIVE");
             return 1;
         }
 
@@ -71,7 +71,7 @@ public class S_God : ScriptableObject
             else
                 currentPower.Value--;
 
-            Debug.Log("NEGATIVE");
+            //Debug.Log("NEGATIVE");
 
             return -1;
         }
